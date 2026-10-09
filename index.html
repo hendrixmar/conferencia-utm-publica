@@ -1,0 +1,785 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>La quinta revolución industrial · ¿Y si ya no somos los únicos inventores? · Hendrik Martina · UTM</title>
+<link rel="stylesheet" href="vendor/reveal.css">
+<link rel="stylesheet" href="css/estilo.css">
+<link rel="stylesheet" href="css/tablero.css">
+</head>
+<body>
+
+<div id="ambiente" aria-hidden="true"></div>
+<div id="alba" aria-hidden="true"></div>
+<button id="sonido" type="button" aria-pressed="false" title="Activar efectos de sonido suaves">Sonido: apagado</button>
+<canvas id="escena"></canvas>
+<div class="reveal"><div class="slides">
+<section class="centro" data-escena="titulo" data-transition="fade" data-auto-animate>
+  <h1 class="anim" style="font-size:112px;line-height:1.06;max-width:1650px;text-align:center">La quinta<br><span class="gradF">revolución industrial</span></h1>
+  <p class="fragment g sub" style="margin-top:44px;font-size:54px;text-align:center">¿Y si ya no somos <strong>los únicos inventores</strong>?<br><span class="mut" style="font-size:28px">Una hipótesis sobre agentes, descubrimiento y responsabilidad humana.</span></p>
+  <p class="mut" style="margin-top:36px;font-size:28px;text-align:center">Hendrik Martina · Universidad Tecnológica de la Mixteca</p>
+  
+</section>
+<section class="medio" data-escena="titulo" data-auto-animate>
+  <div class="persona-cabecera">
+    <div>
+      <p data-id="frase" class="mut" style="font-size:30px;font-family:var(--display);max-width:1100px">“Hay décadas en las que no pasa nada, y semanas en las que pasan décadas.”</p>
+      <h1 class="anim" style="margin-top:60px">Hendrik <span class="grad">Martina</span></h1>
+      <p class="sub anim">Ingeniero de plataforma e infraestructura de IA · Truelogic Software</p>
+      <p class="sub anim">Cofundador de Artesanos Digitales / IA SOFT</p>
+      <div class="anim" style="margin-top:50px"><span class="chip">Universidad Tecnológica de la Mixteca · Huajuapan de León</span></div>
+    </div>
+    
+  </div>
+  
+</section>
+<section data-escena="fuego" data-transition="fade" class="medio">
+  <div class="izq" style="max-width:880px">
+    <div class="kicker fuego anim">Dentro de este marco · una hipótesis sobre velocidad</div>
+    <h2 class="anim" style="font-size:92px">¿Más transformadora que el <span class="gradF">fuego</span> y el <span class="grad">internet</span>?</h2>
+    <h2 class="anim gradF" style="font-size:92px;margin-top:10px">Por su velocidad.</h2>
+    <div style="margin-top:50px;display:flex;flex-direction:column;gap:18px">
+      <div class="vidrio tarjeta anim" style="padding:22px 30px"><b class="gradF" style="font-family:var(--display);font-size:34px">Fuego</b> <span class="mut" style="font-size:26px">· evidencias de uso y encendido separadas por milenios</span></div>
+      <div class="vidrio tarjeta fragment g" data-estado="1" style="padding:22px 30px"><b class="grad" style="font-family:var(--display);font-size:34px">Internet</b> <span class="mut" style="font-size:26px">· 74% del mundo conectado en 2025</span></div>
+      <div class="vidrio tarjeta fragment g" data-estado="2" style="padding:22px 30px"><b style="font-family:var(--display);font-size:34px;color:#c4b5fd">Agentes</b> <span class="mut" style="font-size:26px">· cambios medidos en <strong>10 meses</strong></span></div>
+    </div>
+    <p class="nota-dato anim" style="margin-top:18px">Métricas distintas. No es una prueba de mayor impacto histórico.</p>
+  </div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Cómo vamos a examinarla</div>
+  <h2 class="anim">Tres velocidades. <span class="mut">Y sus límites.</span></h2>
+  <div class="fila" style="margin-top:50px">
+    <div class="vidrio tarjeta col anim"><div class="num m grad">01</div><h3 style="margin-top:16px">Capacidad</h3><p class="mut" style="font-size:26px">qué tan rápido mejora</p></div>
+    <div class="vidrio tarjeta col anim"><div class="num m grad">02</div><h3 style="margin-top:16px">Adopción</h3><p class="mut" style="font-size:26px">qué tan rápido se adopta</p></div>
+    <div class="vidrio tarjeta col anim"><div class="num m grad">03</div><h3 style="margin-top:16px">Costo</h3><p class="mut" style="font-size:26px">qué tan rápido se abarata</p></div>
+    <div class="vidrio tarjeta col anim" style="border-color:rgba(255,122,24,.35)"><div class="num m gradF">✕</div><h3 style="margin-top:16px">Contraargumentos</h3><p class="mut" style="font-size:26px">ustedes deciden</p></div>
+  </div>
+  <p class="fragment g sub" style="margin-top:56px">La habilidad más importante: <strong class="grad">verificar</strong>. Distinguir dato, interpretación y proyección.</p>
+  
+</section>
+<section class="centro" data-preguntas="qr"><h1 class="anim">Tus preguntas también importan.</h1><p class="sub anim" style="margin-top:44px;max-width:1400px;text-align:center">Anota tus preguntas durante la charla. Al final, abrimos la conversación.</p></section>
+<section class="seccion medio" data-transition="zoom">
+  <div class="n anim">01</div><h2 class="anim">Velocidad de capacidad</h2><div class="t anim">Diez meses de cambio medido</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Velocidad 1 de 3 · capacidad</span></div>
+  
+</section>
+<section class="ruido-slide" data-transition="fade">
+  <div class="ruido" aria-hidden="true"><span class="" data-o="0.7" style="left:13.9%;top:13.2%;font-size:37px">¿Agentes o chatbots?</span><span class="" data-o="1" style="left:30.0%;top:50.7%;font-size:50px">¿Todo cambió?</span><span class="" data-o="1" style="left:70.0%;top:56.4%;font-size:47px">¿A quién le creo?</span><span class="titular" data-o="1" style="left:5.9%;top:44.3%;font-size:36px">FMI: “La economía global entre las corrientes cruzadas de la guerra y la tecnología”</span><span class="" data-o="0.42" style="left:66.0%;top:28.2%;font-size:28px">¿A qué benchmark le creo?</span><span class="" data-o="0.42" style="left:34.9%;top:68.9%;font-size:28px">¿Quién tiene razón?</span><span class="" data-o="0.7" style="left:78.1%;top:16.1%;font-size:38px">¿Llegué tarde?</span><span class="" data-o="0.42" style="left:27.4%;top:74.0%;font-size:28px">¿Es puro hype?</span><span class="" data-o="0.42" style="left:50.1%;top:82.1%;font-size:26px">¿Es una burbuja?</span><span class="" data-o="0.7" style="left:14.5%;top:37.9%;font-size:33px">¿Y si se equivoca?</span><span class="" data-o="0.7" style="left:37.4%;top:42.4%;font-size:39px">¿Sigo estudiando programación?</span><span class="" data-o="0.42" style="left:63.4%;top:10.1%;font-size:29px">¿Abierto o cerrado?</span><span class="" data-o="0.7" style="left:42.1%;top:80.2%;font-size:36px">¿Qué pasa con los empleos de entrada?</span><span class="" data-o="0.7" style="left:1.7%;top:39.4%;font-size:36px">¿Cuál es el siguiente lanzamiento?</span><span class="" data-o="0.42" style="left:18.6%;top:62.2%;font-size:28px">¿O nada cambió?</span><span class="" data-o="0.7" style="left:16.3%;top:88.7%;font-size:32px">¿Cuándo se detiene?</span><span class="" data-o="0.7" style="left:61.5%;top:85.2%;font-size:33px">¿Cuánto cuesta de verdad?</span><span class="" data-o="1" style="left:23.3%;top:37.3%;font-size:56px">¿Hasta dónde va a llegar?</span><span class="" data-o="1" style="left:19.5%;top:33.5%;font-size:54px">¿Le doy acceso a mi código?</span><span class="" data-o="1" style="left:53.5%;top:63.1%;font-size:54px">¿Esto aplica a mi carrera?</span><span class="" data-o="0.42" style="left:32.5%;top:23.9%;font-size:27px">¿Me va a quitar el trabajo?</span><span class="" data-o="0.42" style="left:52.9%;top:11.9%;font-size:26px">¿Qué es real?</span><span class="" data-o="0.42" style="left:56.0%;top:29.9%;font-size:24px">¿Ya es más inteligente que yo?</span><span class="" data-o="0.42" style="left:19.0%;top:45.2%;font-size:29px">¿Récord o contaminación?</span><span class="" data-o="0.42" style="left:41.6%;top:85.4%;font-size:30px">¿Qué modelo uso esta semana?</span><span class="" data-o="0.42" style="left:35.5%;top:50.9%;font-size:30px">¿Quién lo verifica?</span><span class="" data-o="0.7" style="left:4.5%;top:61.1%;font-size:38px">¿Y la geopolítica?</span><span class="" data-o="0.7" style="left:32.5%;top:7.2%;font-size:34px">¿Ya llegó la AGI?</span><span class="" data-o="0.7" style="left:57.4%;top:37.6%;font-size:34px">¿Lo uso o lo ignoro?</span><span class="" data-o="1" style="left:30.1%;top:78.8%;font-size:45px">¿Me estoy quedando atrás?</span><span class="" data-o="0.42" style="left:32.2%;top:58.2%;font-size:28px">¿Y la privacidad?</span><span class="" data-o="1" style="left:42.2%;top:37.5%;font-size:45px">¿Otro modelo nuevo?</span><span class="" data-o="0.7" style="left:54.6%;top:28.1%;font-size:37px">¿Cuánta agua consume?</span></div>
+  <div class="fragment senal"><div class="senal-linea"></div>
+    <h2>¿Cómo separo la <span class="grad senal-palabra">señal</span> del ruido?</h2></div>
+  <div class="fuente" style="z-index:3">FMI, Perspectivas de la economía mundial, julio de 2026 (título del informe). Las demás preguntas son genéricas, ilustrativas.</div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="kicker anim">METR · horizonte al 50% de éxito</div>
+  <h2 class="anim" style="font-size:76px;max-width:1500px">¿Qué duración de <span class="grad">tarea humana</span> puede resolver?</h2>
+  <div class="fila" style="margin-top:46px;align-items:center">
+    <div class="vidrio tarjeta col anim"><div class="etq">2023 · GPT-4</div><div class="num l">~3–4<span style="font-size:60px"> min</span></div><div class="etq">duración de un experto humano</div></div>
+    <div class="flecha anim">→</div>
+    <div class="vidrio tarjeta col anim" style="border-color:color-mix(in srgb,var(--violeta) 40%,transparent)"><div class="etq">24 nov 2025 · Claude Opus 4.5</div><div class="num l grad">~5<span style="font-size:60px"> horas</span></div><div class="etq">320 min · IC 170–729 min</div></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:30px"><strong>50% de éxito, no autonomía garantizada.</strong> Tiempo humano, no horas de ejecución del agente.</p>
+  <div class="fuente">METR TH1.1 · software, ML y ciberseguridad: tareas acotadas, no todo el trabajo real. Corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade">
+  <div class="kicker anim">Gráfica 1 · lanzamientos de frontera</div>
+  <h2 class="anim" style="font-size:64px">10 meses de lanzamientos</h2>
+  <p class="nota-dato anim">Selección editorial: 50 modelos insignia, 9 laboratorios · 215 lanzamientos registrados por AA.</p>
+  <div class="graf" data-graf="g1" style="height:650px;margin-top:10px"><canvas></canvas><img class="respaldo" src="img/01_linea_tiempo_modelos.png" alt=""></div>
+  <div class="fuente">Fechas de Artificial Analysis y anuncios registrados en el repositorio; selección no exhaustiva. Corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade">
+  <div class="kicker anim">Gráfica 2 · Índice de Inteligencia de Artificial Analysis v4.3.2</div>
+  <h2 class="anim" style="font-size:64px">29.1 → <span class="grad">57.6</span> <span class="gradF">· +28.5 puntos</span></h2>
+  <p class="nota-dato anim">29.1 es estimado. Índice compuesto: <strong>no significa doble inteligencia ni doble capacidad</strong>.</p>
+  <div class="graf" data-graf="g2" style="height:590px"><canvas></canvas><img class="respaldo" src="img/02_indice_inteligencia_AA.png" alt=""></div>
+  <div class="leyenda anim" style="margin-top:8px"><span><i style="background:#ff8a5c"></i>Anthropic</span><span><i style="background:#19c39c"></i>OpenAI</span><span><i style="background:#5b9cff"></i>Google</span><span><i style="background:#e5e7eb"></i>xAI</span><span><i style="background:#a78bfa"></i>Meta</span><span><i style="background:#6d8dff"></i>DeepSeek</span><span><i style="background:#ffb020"></i>Qwen</span><span><i style="background:#ff5c9a"></i>Kimi</span><span><i style="background:#2dd4bf"></i>GLM</span><span>◇ pesos abiertos</span><span>○ hueco = estimado por AA</span><span>— frontera</span></div>
+  <div class="fuente">Corte: 2 oct 2026; documentado como AA v4.3.2, sin versión en el JSON. Comparar requiere metodología común. Frontera = máximo acumulado; no baja por construcción.</div>
+  
+</section>
+<section class="tesis" data-transition="fade">
+  <div class="icono anim">↩ Tesis</div>
+  <blockquote class="anim">Lo que me impresiona es la <span class="grad">velocidad</span>:<br><span class="gradF">+28.5 puntos</span> en un índice compuesto, en diez meses.<br><span class="mut">No “doble inteligencia”.</span></blockquote>
+  <div class="barra anim"></div>
+  
+</section>
+<section class="medio" data-auto-animate>
+  <div class="kicker anim">02 · De chatbots a agentes</div>
+  <h2 data-id="agente-t">Un chatbot <span class="mut">responde</span>. Un agente <span class="grad">actúa</span>.</h2>
+  <div class="fila" style="margin-top:50px">
+    <div class="vidrio tarjeta col anim"><h3>Chatbot</h3><p class="mut" style="font-size:30px">En modo conversación: pregunta → respuesta.</p><div class="chip" style="margin-top:14px">analogía: lazo abierto</div></div>
+    <div class="vidrio tarjeta col anim" style="border-color:color-mix(in srgb,var(--violeta) 45%,transparent)"><h3 class="grad">Agente</h3><p class="mut" style="font-size:30px">Objetivo → herramientas → resultado → revisión → siguiente acción.</p><div class="chip" style="margin-top:14px">lazo cerrado · con criterios y permisos</div></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:28px"><strong class="gradF">Human in the loop · la persona sigue en el circuito.</strong><br>Define el objetivo, autoriza acciones sensibles y verifica el resultado.</p>
+  
+</section>
+<section data-escena="agentes" data-auto-animate>
+  <div class="lado">
+    <div class="kicker anim">El ciclo agéntico</div>
+    <h2 data-id="agente-t" style="font-size:64px">Lo que cambió</h2>
+    <ol class="lista" style="margin-top:20px">
+      <li class="anim"><div>Herramientas<span class="d">terminal, navegador, API, MCP</span></div></li>
+      <li class="anim"><div>Entorno<span class="d">el compilador contesta “error en la línea 42”</span></div></li>
+      <li class="anim"><div>Persistencia<span class="d">otro intento con retroalimentación · no éxito garantizado</span></div></li>
+    </ol>
+    <p class="nota-dato anim" style="margin-top:24px"><strong class="gradF">Human in the loop</strong><br>Permisos antes de actuar.<br>Aprobación humana antes de publicar o borrar datos.<br>Evidencia antes de aceptar el resultado.</p>
+  </div>
+  
+</section>
+<section data-transition="fade">
+  <div class="kicker anim">Gráfica 3 · SWE-bench (bugs reales de GitHub)</div>
+  <h2 class="anim" style="font-size:60px">Más tareas resueltas. <span class="grad">Mediciones imperfectas.</span></h2>
+  <p class="nota-dato anim">Verified: 80.9% → 96% · Pro: 52% → 89.9% · <strong>autorreportados, con arneses distintos</strong>.</p>
+  <div class="anotaciones-grafica">
+    <p class="anim evento-verified"><strong>23 feb 2026 · Verified</strong><br>OpenAI deja de reportarlo: saturación y contaminación.</p>
+    <p class="anim evento-pro"><strong>8 jul 2026 · Pro</strong><br>OpenAI retira su recomendación: ~30% de tareas defectuosas.</p>
+  </div>
+  <div class="graf" data-graf="g3" style="height:500px"><canvas></canvas><img class="respaldo" src="img/03_swe_bench.png" alt=""></div>
+  <div class="fuente">System cards y anuncios registrados. Mismo arnés (swebench.com, feb 2026): Opus 4.5, 76.8%. Saturación, contaminación y tareas defectuosas limitan la lectura. Corte: 2 oct 2026.</div>
+  <div class="fragment capa-tesis"><div class="ct-in"><div class="icono">↩ Tesis</div><blockquote>Un récord no basta.<br>Necesitamos evaluaciones que <span class="grad">sigan siendo válidas</span>.</blockquote><div class="barra"></div></div></div>
+  
+</section>
+<section data-transition="fade" data-dominio="0">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 1 de 9</div>
+  <h2 class="anim" style="font-size:64px">Matemáticas de investigación</h2>
+  <p class="nota-dato anim">FrontierMath T4 · Epoch AI · 100% de ~41 problemas; no de todas las matemáticas. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":0}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_01.png" alt="Matemáticas de investigación"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="1">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 2 de 9</div>
+  <h2 class="anim" style="font-size:64px">Conocimiento experto</h2>
+  <p class="nota-dato anim">Humanity&#x27;s Last Exam · AA · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":1}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_02.png" alt="Conocimiento experto"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="2">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 3 de 9</div>
+  <h2 class="anim" style="font-size:64px">Ciencia (bio, quím, fís)</h2>
+  <p class="nota-dato anim">GPQA Diamond · Epoch AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":2}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_03.png" alt="Ciencia (bio, quím, fís)"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="3">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 4 de 9</div>
+  <h2 class="anim" style="font-size:64px">Biología computacional</h2>
+  <p class="nota-dato anim">BioMysteryBench · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":3}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_04.png" alt="Biología computacional"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="4">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 5 de 9</div>
+  <h2 class="anim" style="font-size:64px">Trabajo de oficina</h2>
+  <p class="nota-dato anim">GDPval · OpenAI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":4}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_05.png" alt="Trabajo de oficina"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="5">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 6 de 9</div>
+  <h2 class="anim" style="font-size:64px">Trabajo freelance real</h2>
+  <p class="nota-dato anim">Remote Labor Index · Epoch · Proyectos freelance completos: ~21%. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":5}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_06.png" alt="Trabajo freelance real"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="6">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 7 de 9</div>
+  <h2 class="anim" style="font-size:64px">Derecho</h2>
+  <p class="nota-dato anim">Legal Research · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":6}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_07.png" alt="Derecho"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="7">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 8 de 9</div>
+  <h2 class="anim" style="font-size:64px">Finanzas</h2>
+  <p class="nota-dato anim">Finance Agent v2 · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":7}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_08.png" alt="Finanzas"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="8">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 9 de 9</div>
+  <h2 class="anim" style="font-size:64px">Medicina</h2>
+  <p class="nota-dato anim">MedCode · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":8}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_09.png" alt="Medicina"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section id="grafica5" data-transition="fade">
+  <div class="kicker anim">Gráfica 5 · resumen de los mismos nueve benchmarks</div>
+  <h2 class="anim" style="font-size:64px">Punto de partida → <span class="grad">mejor puntaje observado</span></h2>
+  <p class="nota-dato anim">Seleccionamos el máximo: <strong>que no baje es estructural</strong>. No todos los modelos ni todos los oficios.</p>
+  <div class="graf" data-graf="g5" style="height:640px"><canvas></canvas><img class="respaldo" src="img/05_dominios_antes_ahora.png" alt=""></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI. Partida: Opus 4.5 o † primer evaluado → mejor del corte. GDPval termina en abr 2026. Corte: 2 oct 2026.</div>
+  <div class="fragment capa-tesis"><div class="ct-in"><div class="icono">↩ Tesis</div><blockquote>Mejoras rápidas en <span class="grad">varios tipos de trabajo cognitivo</span>.<br><span class="mut">El impacto en cada oficio todavía hay que demostrarlo.</span></blockquote><div class="barra"></div></div></div>
+  
+</section>
+<section class="seccion medio" data-transition="zoom">
+  <div class="n anim">04</div><h2 class="anim">La huella en el código</h2><div class="t anim">GitHub en 2026 · y mi propia gráfica</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Velocidad 2 de 3 · adopción</span></div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="kicker anim">Stack Overflow · encuesta de abril 2026 · ~1,100 profesionales</div>
+  <h2 class="anim">Agentes en el trabajo: <span class="mut">31%</span> → <span class="grad">59%</span></h2>
+  <p class="nota-dato anim">En un año, según esta encuesta. No representa a toda la población.</p>
+  <div class="vidrio tarjeta anim" style="margin-top:42px;max-width:1200px"><div class="num m gradF">63%</div><p class="sub" style="margin:10px 0 0">casi nunca deja al agente completamente solo. <strong>Agentes con correa.</strong></p></div>
+  <div class="fuente">Stack Overflow, encuesta de abril de 2026 (referencia registrada en fuentes.md). Supervisión no equivale a productividad.</div>
+  
+</section>
+<section data-transition="fade" data-auto-animate>
+  <div class="kicker anim">Gráfica 6 · actividad pública en GitHub</div>
+  <h2 data-id="gh-t" style="font-size:62px">Commits públicos diarios: <span class="mut">4.8 M</span> → <span class="grad">94 M</span></h2>
+  <p class="nota-dato anim">Enero → septiembre de 2026 · tracker de terceros, incluye bots. <strong>Actividad ≠ productividad.</strong></p>
+  <div class="fila" style="gap:36px">
+    <div class="graf" data-graf="g6a" style="height:590px;flex:1.75"><canvas></canvas><img class="respaldo" src="img/06_github_actividad.png" alt=""></div>
+    <div class="vidrio tarjeta fragment g" style="flex:1;align-self:center;padding:40px">
+      <div class="kicker" style="font-size:20px">GitHub · blog oficial · 20 ago 2026</div>
+      <p style="font-family:var(--display);font-size:40px;line-height:1.15">“Desde abril, los commits mensuales crecieron de <strong>1,400 millones</strong> a <strong class="grad">2,900 millones</strong>.”</p>
+      <p class="mut" style="font-size:22px">Incluye privados; otro universo y periodo. No valida el tracker uno a uno.</p>
+    </div>
+  </div>
+  <div class="fuente">Powerset, github-coding-agent-tracker (Search API); github.blog, “The August 17 outage, and the work ahead”. Corte: 2 oct 2026. No identifica la causa del crecimiento.</div>
+  
+</section>
+<section data-transition="fade">
+  <div class="kicker anim">Gráfica 6 · GitHub Innovation Graph</div>
+  <h2 class="anim" style="font-size:68px">Más pushes públicos.</h2>
+  <p class="nota-dato anim">T1 2026: +78.4% anual en el mundo · México: 1.59 → 3.19 millones, aproximadamente ×2.</p>
+  <div class="graf" data-graf="g6b" style="height:640px;margin-top:20px"><canvas></canvas></div>
+  <div class="fuente">GitHub Innovation Graph · T1 2026: 380 millones de pushes públicos. Actividad, no productividad ni efecto causal de la IA.</div>
+  
+</section>
+<section data-transition="fade">
+  <div class="kicker anim">Gráfica 6 · firmas de agentes detectables</div>
+  <h2 class="anim" style="font-size:68px">Más commits con firma de IA.</h2>
+  <p class="nota-dato anim">3.8 → 27.8 millones al mes. Un piso de uso detectable, no el total de código hecho con IA.</p>
+  <div class="graf" data-graf="g6c" style="height:640px;margin-top:20px"><canvas></canvas></div>
+  <div class="fuente">Powerset, github-coding-agent-tracker. Métrica y periodo distintos de los pushes oficiales; no inferir causalidad.</div>
+  
+</section>
+<section data-transition="fade">
+  <div class="kicker fuego anim">Gráfica 7 · mi historial anual · públicos + privados</div>
+  <h2 class="anim" style="font-size:68px">Mi actividad cambió.</h2>
+  <div class="fila anim" style="gap:80px;margin:20px 0">
+    <div><div class="num s gradF"><span class="contar" data-a="3304">3,304</span></div><div class="etq">commits en 2026 (al 2 oct)</div></div>
+    <div><div class="num s grad">×<span class="contar" data-a="18">18</span></div><div class="etq">vs. todo 2025 (182)</div></div>
+    <div><div class="num s grad"><span class="contar" data-a="97">97</span>%</div><div class="etq">en repos privados</div></div>
+  </div>
+  <div class="graf" data-graf="g7a" style="height:540px"><canvas></canvas><img class="respaldo" src="img/07_hendrik_contribuciones.png" alt=""></div>
+  <div class="fuente">Rama por defecto, 156 repos con acceso (83 privados) + terceros públicos. Corte: 2 oct 2026, CT. Agregados; atribuciones por confirmar. Actividad ≠ productividad ni calendario del perfil público.</div>
+  
+</section>
+<section data-transition="fade">
+  <div class="kicker fuego anim">Gráfica 7 · mi historial mensual</div>
+  <h2 class="anim" style="font-size:68px">Cuándo aumentó la actividad.</h2>
+  <div class="fila anim" style="gap:80px;margin:20px 0">
+    <div><div class="num s gradF"><span class="contar" data-a="971">971</span></div><div class="etq">commits en agosto</div></div>
+    <div><div class="num s">~<span class="contar" data-a="38">38</span>%</div><div class="etq">con IA como coautor (mar–sep)</div></div>
+  </div>
+  <div class="graf" data-graf="g7b" style="height:540px"><canvas></canvas></div>
+  <div class="fuente">Mismo historial atribuido a Hendrik; corte 2 oct 2026, CT. Una firma de coautor no identifica todo uso de IA ni demuestra su efecto. Actividad ≠ productividad.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker fuego anim">Un testimonio, no una regla · DHH · Rails World, 23 sep 2026</div>
+  <div class="persona-cabecera">
+    <div>
+      <p class="cita anim" style="font-size:60px;line-height:1.15">Escribir código a mano ya no es una actividad económicamente productiva para la gran mayoría de los programadores.</p>
+      <p class="autor anim" style="font-size:22px"><i>“Writing code by hand is no longer an economically productive enterprise for the vast majority of programmers working at the vast majority of companies.”</i> · David Heinemeier Hansson</p>
+    </div>
+    
+  </div>
+  <p class="nota-dato anim"><strong>Opinión de DHH, no conclusión universal.</strong> Líneas de código ≠ calidad ni productividad.</p>
+  <div class="fuente">DHH, keynote Rails World 2026, Austin (youtube.com/watch?v=vDjW_dRyKXY), 23 sep. Traducción propia; testimonio, no estudio. Revisión registrada el 3 oct.</div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="kicker fuego anim">DHH · cómo cambió su postura</div>
+  <h2 class="anim" style="font-size:76px">De la reserva a <span class="grad">“lápices abajo”.</span></h2>
+  <div class="fila" style="margin-top:40px;gap:40px">
+    <div class="vidrio tarjeta col anim" style="padding:30px 32px"><div class="etq">7 ene 2026 · su blog</div><h3 style="margin-top:10px">“Muy lejos” del 90% de código hecho por agentes</h3></div>
+    <div class="flecha anim">→</div>
+    <div class="vidrio tarjeta col anim" style="padding:30px 32px;border-color:rgba(255,122,24,.45)"><div class="etq">23 sep 2026 · Rails World</div><h3 style="margin-top:10px">~5 meses sin escribir código a mano · “lápices abajo” en 37signals</h3></div>
+  </div>
+  <div class="fila anim" style="align-items:center;gap:40px;margin-top:40px">
+    <div class="num m gradF"><span class="contar" data-a="150000">150,000</span></div>
+    <div class="etq">líneas producidas en agosto de 2026<br>antes ~30,000 al año · Rust verboso · volumen ≠ productividad</div>
+  </div>
+  <div class="fragment g" style="margin-top:16px;margin-bottom:14px"><span class="chip" style="border-color:color-mix(in srgb,var(--violeta) 60%,transparent);font-size:24px">Su punto de quiebre personal: <strong class="grad">24 nov 2025 · Opus 4.5</strong>.</span></div>
+  <div class="fuente">Keynote Rails World 2026, Austin (youtube.com/watch?v=vDjW_dRyKXY); blog “Promoting AI agents”, 7 ene 2026. Traducción propia. Fecha aproximada; Rust verboso. Revisión registrada el 3 oct, sin nueva consulta.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Ingeniería de software · el propósito no cambió</div>
+  <h2 class="anim" style="font-size:84px">El código es el medio.<br><span class="grad">La solución es el objetivo.</span></h2>
+  <p class="sub anim" style="margin-top:22px">Desarrollar software no es el fin en sí mismo: es servir una necesidad real.</p>
+  <div class="fila" style="margin-top:36px;gap:28px">
+    <div class="vidrio tarjeta col anim"><div class="etq">01 · Entender</div><h3>El problema correcto</h3><p class="mut" style="font-size:30px">Usuarios, contexto y requisitos.</p></div>
+    <div class="vidrio tarjeta col anim"><div class="etq">02 · Decidir</div><h3>Una solución viable</h3><p class="mut" style="font-size:30px">Diseño, costo y riesgos.</p></div>
+    <div class="vidrio tarjeta col anim" style="border-color:color-mix(in srgb,var(--cian) 50%,transparent)"><div class="etq">03 · Responder</div><h3>Software confiable</h3><p class="mut" style="font-size:30px">Verificar, operar y mantener.</p></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:28px">La IA cambia cómo construimos. <strong>No elimina el juicio ni la responsabilidad.</strong></p>
+  <div class="fuente">Síntesis del código IEEE-CS/ACM: preámbulo; 1.03, 3.01, 3.08, 3.10, 3.15 y 8.02. No es una cita literal ni una afirmación sobre el origen histórico de la profesión.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="persona-cabecera">
+    <div>
+      <div class="kicker fuego anim">Uncle Bob · autor de Clean Code · experiencia personal</div>
+      <h2 class="anim" style="font-size:78px">De leer cada línea<br>a <span class="grad">exigir evidencia.</span></h2>
+      <p class="cita anim" style="font-size:38px;margin-top:22px">“La mayor parte del tiempo, el 95% del código nunca lo veo.”</p>
+    </div>
+    <img class="retrato retrato-mediano anim" data-persona="robert-c-martin" src="img/personas/robert-c-martin.png" alt="Robert C. Martin (Uncle Bob)" width="400" height="500">
+  </div>
+  <p class="nota-dato anim" style="margin-top:30px"><strong>Es una experiencia personal.</strong> Todavía inspecciona arquitectura, prueba la aplicación y a veces lee código.</p>
+  <div class="fuente">Aviator, entrevista 24 sep 2026: “Why I Stopped Reading Code and Building Harnesses”. Traducción propia; cifra autorreportada, no estudio comparativo.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Uncle Bob · cómo exige evidencia</div>
+  <h2 class="anim" style="font-size:80px">Tres controles.<br><span class="mut">Ninguno es una garantía total.</span></h2>
+  <div class="fila" style="margin-top:40px;gap:28px">
+    <div class="vidrio tarjeta col anim"><div class="etq">Comportamiento</div><h3>Pruebas unitarias</h3><p class="mut" style="font-size:28px">Comprobar resultados, no creer en la explicación del agente.</p></div>
+    <div class="vidrio tarjeta col anim"><div class="etq">Riesgo de cambio</div><h3>CRAP</h3><p class="mut" style="font-size:28px">Cruzar complejidad de las funciones y cobertura de pruebas.</p></div>
+    <div class="vidrio tarjeta col anim"><div class="etq">Calidad de las pruebas</div><h3>Mutation testing</h3><p class="mut" style="font-size:28px">Cambiar el código adrede: ¿las pruebas detectan el error?</p></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:26px"><strong>Todavía inspecciona arquitectura, prueba la aplicación y a veces lee código.</strong><br>Pasar los controles no garantiza requisitos correctos ni seguridad completa.</p>
+  <div class="fuente">Aviator, entrevista publicada el 24 sep 2026: “Why I Stopped Reading Code and Building Harnesses”. Traducción propia; cifra autorreportada, no estudio comparativo.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">IA y código abierto · Google / OSS-Fuzz</div>
+  <h2 class="anim" style="font-size:80px">Fuzzing asistido por IA.<br><span class="grad">Vulnerabilidades verificables.</span></h2>
+  <div class="num l grad anim" style="margin-top:40px">26</div>
+  <h3 class="anim">Vulnerabilidades reportadas · noviembre 2024</h3>
+  <p class="sub anim" style="margin-top:28px">Fuzzing generado o mejorado con IA.<br>OpenSSL publicó una corrección.</p>
+  <p class="nota-dato anim">No son 26 parches autónomos aceptados.</p>
+  <div class="fuente">Google Security, 20 nov 2024 · OpenSSL CVE-2024-9143, corrección 16 oct 2024. Fuentes y límites en investigacion_ia_codigo_abierto.md.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="fila" style="align-items:center;gap:80px">
+    <img class="retrato anim" data-persona="daniel-stenberg" src="img/personas/daniel-stenberg.png" alt="Daniel Stenberg" width="400" height="500">
+    <div>
+      <div class="kicker anim">Daniel Stenberg · curl · mayo 2026</div>
+      <div class="num l gradF anim">200–300</div>
+      <h2 class="anim" style="font-size:64px">Correcciones fusionadas</h2>
+      <p class="sub anim" style="margin-top:28px">Tras análisis asistidos por IA,<br>durante unos 8–10 meses.</p>
+      <p class="nota-dato anim">Revisión IA + humana; no un ensayo causal.</p>
+    </div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:36px"><strong>El beneficio está en el resultado verificado, no en el volumen generado.</strong></p>
+  <div class="fuente">Daniel Stenberg/curl, 11 may 2026. Fuentes y límites en investigacion_ia_codigo_abierto.md.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker fuego anim">IA y código abierto · curl · un análisis de mayo 2026</div>
+  <h2 class="anim" style="font-size:80px">Quién paga <span class="gradF">la revisión.</span></h2>
+  <div class="num m anim" style="margin-top:40px">5 supuestas → <span class="grad">1 confirmada</span></div>
+  <p class="sub anim" style="margin-top:28px">Tres falsos positivos y un bug no considerado vulnerabilidad.<br><strong>El equipo decidió.</strong></p>
+  <p class="nota-dato anim">En 2025 también documentó reportes basura y desgaste del equipo.</p>
+  <p class="nota-dato anim" style="margin-top:30px"><strong>Antes de enviar: comprende, reproduce, prueba y revisa licencias.</strong><br>SymPy exige comprensión y declarar uso sustancial de IA; las reglas varían por proyecto.</p>
+  <div class="fuente">Stenberg/curl, 14 jul 2025 y 11 may 2026 · políticas SymPy y uso responsable GitHub.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker fuego anim">METR · ensayo con herramientas de principios de 2025</div>
+  <h2 class="anim" style="font-size:80px">La productividad <span class="gradF">hay que medirla.</span></h2>
+  <div class="num l gradF anim" style="margin-top:40px">19% más tiempo</div>
+  <p class="sub anim" style="margin-top:30px">16 expertos OSS · 246 tareas en sus propios repositorios.</p>
+  <p class="nota-dato anim">Resultado histórico, no ley universal.</p>
+  <p class="sub anim" style="margin-top:36px"><strong>Actualización 2026:</strong> posible mejora;<br>su magnitud sigue incierta por sesgos.</p>
+  <div class="fuente">METR, 10 jul 2025 y actualización 24 feb 2026. No generalizar una muestra ni un periodo de herramientas.</div>
+  
+</section>
+<section class="tesis" data-transition="fade">
+  <div class="icono anim">↩ Tesis</div>
+  <blockquote class="anim">Cambió rápido cómo producimos código.<br>Ahora midamos <span class="grad">trabajo aceptado, calidad y costo</span>,<br><span class="mut">no solo actividad.</span></blockquote>
+  <div class="barra anim"></div>
+  
+</section>
+<section class="seccion medio" data-transition="zoom">
+  <div class="n anim">05</div><h2 class="anim">Fuego, internet, IA</h2><div class="t anim">Adopción, capacidad y costo: las tres curvas juntas</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Velocidad 3 de 3 · costo</span></div>
+  
+</section>
+<section data-transition="slide">
+  <div class="kicker fuego anim">Hitos · escala logarítmica (años atrás)</div>
+  <h2 class="anim" style="font-size:70px">Del fuego a los agentes</h2>
+  <p class="nota-dato anim">Arqueología, conectividad y uso de IA: <strong>medidas y poblaciones distintas</strong>, no una curva de adopción común.</p>
+  <div class="logeje anim"><div class="linea"></div><div class="esc" style="left:16.7%">100 mil</div><div class="esc" style="left:32.5%">10 mil</div><div class="esc" style="left:48.4%">mil</div><div class="esc" style="left:64.3%">100</div><div class="esc" style="left:80.2%">10</div><div class="esc" style="left:96.0%">1 año</div><div class="hito" style="left:0.8%;color:var(--fuego)"><div class="pt"></div><div class="arr"><b style="color:var(--fuego)">~1 millón de años</b><span>evidencia de uso controlado · Wonderwerk</span></div></div><div class="hito" style="left:7.1%;color:var(--fuego2)"><div class="pt"></div><div class="abj"><b style="color:var(--fuego2)">~400 mil años</b><span>evidencia de encendido · Barnham</span></div></div><div class="hito" style="left:72.4%;color:var(--cian)"><div class="pt"></div><div class="arr"><b style="color:var(--cian)">1995</b><span>internet comercial · 74% global en 2025</span></div></div><div class="hito" style="left:86.6%;color:var(--violeta)"><div class="pt"></div><div class="abj"><b style="color:var(--violeta)">nov 2022</b><span>IA generativa · 54.6% en EE. UU., ago 2025</span></div></div><div class="hito" style="left:97.3%;color:var(--cian)"><div class="pt"></div><div class="arr"><b style="color:var(--cian)">10 meses</b><span>ventana de esta charla · agentes</span></div></div></div>
+  <div class="fuente">Wonderwerk; Barnham, Nature dic 2025; UIT 2025; Fed de San Luis. Hallazgos más antiguos ≠ fechas exactas de invención. Fuentes del corte del repositorio.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Adopción a ~3 años · comparación histórica de EE. UU.</div>
+  <div style="max-width:1500px">
+    <div class="anim" style="display:flex;justify-content:space-between;font-size:34px"><span>PC</span><b>19.7%</b></div><div class="barraH"><div data-w="19.7" style="background:rgba(160,170,200,.5)"></div></div>
+    <div class="anim" style="display:flex;justify-content:space-between;font-size:34px"><span>Internet</span><b>30.1%</b></div><div class="barraH"><div data-w="30.1" style="background:linear-gradient(90deg,#1e7f99,#22d3ee)"></div></div>
+    <div class="anim" style="display:flex;justify-content:space-between;font-size:34px"><span class="grad" style="font-weight:700">IA generativa</span><b class="grad" style="font-size:44px">54.6%</b></div><div class="barraH"><div data-w="54.6" style="background:var(--grad)"></div></div>
+  </div>
+  <p class="nota-dato anim">Cambian épocas y definiciones. No mide uso diario ni integración profunda en el trabajo.</p>
+  <div class="vidrio tarjeta fragment g" style="max-width:900px;margin-top:20px"><div class="num m grad"><span class="contar" data-a="1200">1,200</span> millones</div><div class="etq">de usuarios semanales de ChatGPT (OpenAI, 29 sep 2026)</div></div>
+  <div class="fuente">Fed de San Luis (adultos de EE. UU.); ChatGPT: cifra de OpenAI registrada vía The Verge. Poblaciones y fechas distintas. Sin nueva consulta externa.</div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="kicker anim">Capacidad · ajuste histórico de METR</div>
+  <h2 class="anim">El horizonte de tareas se duplicó…</h2>
+  <div class="fila" style="margin-top:50px;align-items:center">
+    <div class="vidrio tarjeta col anim"><div class="etq">desde 2019</div><div class="num l">cada ~<span class="contar" data-a="7">7</span> <span style="font-size:60px">meses</span></div></div>
+    <div class="flecha anim">→</div>
+    <div class="vidrio tarjeta col anim" style="border-color:color-mix(in srgb,var(--violeta) 40%,transparent)"><div class="etq">desde 2024</div><div class="num l grad">cada <span class="contar" data-a="89" data-delay=".8">89</span> <span style="font-size:60px">días</span></div></div>
+  </div>
+  <p class="nota-dato anim">Duración humana al 50% de éxito. <strong>Tendencia, no ley ni pronóstico garantizado.</strong></p>
+  <div class="fuente">METR TH1.1: ajustes desde 2019 y desde 2024. Software, ML y ciberseguridad; no tiempo de ejecución autónoma.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Costo a desempeño comparable · estimación de Epoch AI</div>
+  <div class="num xl gradF anim">~13× <span style="font-size:80px;color:#e8ecf8;-webkit-text-fill-color:#e8ecf8">de caída anual</span></div>
+  <p class="nota-dato anim" style="margin-top:28px">Varía por tarea. $1 → ~8 centavos <strong>solo si continúa la tasa</strong>; no es el costo total de un agente.</p>
+  <div class="fila" style="margin-top:44px;max-width:1300px">
+    <div class="vidrio tarjeta col fragment g"><div class="num m grad">6×</div><div class="etq">vs. caída histórica del costo de cómputo</div></div>
+    <div class="vidrio tarjeta col fragment g"><div class="num m grad">54×</div><div class="etq">vs. electricidad (serie histórica)</div></div>
+  </div>
+  <div class="fuente">Comparación de Epoch AI, con series y periodos distintos. No incluye necesariamente herramientas, intentos y revisión humana.</div>
+  
+</section>
+<section class="tesis" data-transition="fade">
+  <div class="icono anim">↩ Tesis</div>
+  <blockquote class="anim">Mi argumento es el <span class="grad">cambio simultáneo</span>:<br>adopción, desempeño y costo.<br><span class="mut">Es la derivada, no el valor. Sin prometer una pendiente eterna.</span></blockquote>
+  <div class="barra anim"></div>
+  
+</section>
+<section data-escena="revoluciones" data-transition="fade">
+  <div class="kicker anim">06 · Las revoluciones industriales</div>
+  <h2 class="anim" style="font-size:76px;max-width:1100px">Del músculo a la <span class="grad">cognición</span></h2>
+  <div class="vidrio" style="position:absolute;left:120px;bottom:100px;width:640px;padding:6px 30px">
+    <ol class="lista compacta"><li class="fragment g" data-estado="1"><div>Vapor y mecanización<span class="d">la máquina amplía el músculo</span></div></li><li class="fragment g" data-estado="2"><div>Electricidad, acero, ensamble<span class="d">energía a escala</span></div></li><li class="fragment g" data-estado="3"><div>Electrónica y computadoras<span class="d">automatización programada</span></div></li><li class="fragment g" data-estado="4"><div>Digital + físico + biológico<span class="d"><img class="retrato retrato-linea" data-persona="klaus-schwab" src="img/personas/klaus-schwab.png" alt="Klaus Schwab" width="400" height="500">Klaus Schwab, 2016</span></div></li><li class="fragment g" data-estado="5"><div>Agentes · mi marco<span class="d">trabajo cognitivo con herramientas</span></div></li></ol>
+  </div>
+  <div class="fragment g" data-estado="6" style="position:absolute;right:120px;bottom:120px;max-width:620px;text-align:right"><p class="sub"><strong class="grad">¿De escalones a rampa?</strong><br>Una hipótesis, no un destino inevitable.</p></div>
+  
+</section>
+<section class="medio" data-auto-animate>
+  <div class="kicker anim">Una aclaración honesta</div>
+  <h2 data-id="i50">“Industria 5.0” ya existe <span class="mut" style="font-size:50px">(Comisión Europea, 2021)</span></h2>
+  <div class="fila" style="margin-top:50px">
+    <div class="vidrio tarjeta col anim"><div class="etq">El término existente</div><h3>Sostenible, centrada en las personas y resiliente.</h3><div class="chip">Comisión Europea · 2021</div></div>
+    <div class="vidrio tarjeta col anim" style="border-color:color-mix(in srgb,var(--violeta) 45%,transparent)"><div class="etq">Mi marco en esta charla</div><h3>Agentes con objetivos, herramientas y supervisión.</h3><div class="chip" style="border-color:color-mix(in srgb,var(--violeta) 60%,transparent)">no una clasificación oficial</div></div>
+  </div>
+  
+</section>
+<section class="medio" data-auto-animate>
+  <h2 data-id="i50" style="font-size:76px">¿Por qué <span class="grad">podría ser “la última”</span>?</h2>
+  <ol class="lista" style="margin-top:30px">
+    <li class="fragment g"><div>Puede ayudar al inventor<span class="d">participar en la siguiente tecnología, no reemplazar toda la investigación</span></div></li>
+    <li class="fragment g"><div>El cambio podría ser más continuo<span class="d">si las mejoras se mantienen · no extrapolación inevitable</span></div></li>
+    <li class="fragment g"><div>Alcance amplio<span class="d">muchos problemas cognitivos, no cualquier problema resuelto</span></div></li>
+  </ol>
+  <div class="fragment capa-tesis"><div class="ct-in"><div class="icono">↩ Tesis</div><blockquote>Mi hipótesis: cambia la <span class="grad">velocidad y la forma de participar</span><br>en la creación de nuevas tecnologías.</blockquote><div class="barra"></div></div></div>
+  
+</section>
+<section class="seccion medio" data-transition="zoom">
+  <div class="n anim">07</div><h2 class="anim">Sean duros conmigo</h2><div class="t anim">Los mejores argumentos en contra</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Lo prometido · contraargumentos</span></div>
+  
+</section>
+<section class="medio" data-transition="fade" data-auto-animate>
+  <div class="kicker fuego anim">Contraargumentos</div>
+  <h2 data-id="contra" style="font-size:80px">Los mejores argumentos <span class="gradF">en contra</span></h2>
+  <ol class="lista" style="margin-top:20px">
+    <li class="fragment g"><div>El fuego nos hizo humanos<span class="d">hipótesis de la cocción (Wrangham), debatida · no comparo importancia histórica</span></div></li>
+    <li class="fragment g"><div>La IA depende de lo anterior<span class="d">electricidad, chips e internet también explican su velocidad</span></div></li>
+    <li class="fragment g"><div>Adopción no es impacto<span class="d">Acemoglu (2024): proyección de PTF ≤ ~0.66% en 10 años · RLI freelance: ~21%</span></div></li>
+    <li class="fragment g"><div>Límites físicos<span class="d">energía, chips y agua</span></div></li>
+  </ol>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Agua · EE. UU. · comparación de escala, no de impacto</div>
+  <h2 class="anim" style="font-size:76px">Golf y centros de datos:<br><span class="grad">ojo con el denominador.</span></h2>
+  <div class="fila" style="margin-top:28px;gap:36px">
+    <div class="vidrio tarjeta col anim" style="padding:32px">
+      <div class="etq">Golf · riego · 2024</div><div class="num m grad" style="margin-top:12px">2.01</div>
+      <h3>Billones de litros aplicados</h3><p class="mut" style="font-size:28px">≈532 mil millones de galones estadounidenses.<br>GCSAA: 1.632 millones de acre-pies.</p>
+    </div>
+    <div class="vidrio tarjeta col anim" style="padding:32px;border-color:color-mix(in srgb,var(--violeta) 45%,transparent)">
+      <div class="etq">Todos los centros de datos · directo · 2023</div><div class="num m gradF" style="margin-top:12px">66</div>
+      <h3>Mil millones de litros consumidos</h3><p class="mut" style="font-size:28px">≈17.4 mil millones de galones.<br><strong>No es una cifra exclusiva de IA.</strong></p>
+    </div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:28px"><strong>Dividir esos volúmenes da ≈30.5×.</strong> Años y contabilidades distintos: agua aplicada ≠ consumida.<br>Que otra actividad use más no elimina el impacto local de un centro de datos.</p>
+  <div class="fuente">GCSAA, encuesta de riego 2024 publicada en dic 2025, fig. 2/tabla 1 · LBNL, informe 2024, estimación para 2023. No es una comparación actual homogénea ni IA contra golf.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Todos los centros de datos de EE. UU. · estimación LBNL · 2023</div>
+  <h2 class="anim" style="font-size:80px">El agua directa<br><span class="grad">no es toda la huella.</span></h2>
+  <div class="fila" style="margin-top:30px;gap:28px">
+    <div class="vidrio tarjeta col anim"><div class="etq">En las instalaciones</div><div class="num m grad">66</div><h3>Directa</h3><p class="mut" style="font-size:28px">Mil millones de litros, principalmente para enfriamiento.</p></div>
+    <div class="vidrio tarjeta col anim"><div class="etq">Al generar electricidad</div><div class="num m gradF">≈800</div><h3>Indirecta</h3><p class="mut" style="font-size:28px">Mil millones de litros asociados al suministro eléctrico.</p></div>
+    <div class="vidrio tarjeta col anim" style="border-color:color-mix(in srgb,var(--cian) 50%,transparent)"><div class="etq">Suma estimada</div><div class="num m grad">≈866</div><h3>Directa + indirecta</h3><p class="mut" style="font-size:28px">Mil millones de litros: ≈229 mil millones de galones, no sólo agua indirecta.</p></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:28px">Todos los centros de datos, no sólo IA. “Billón” = 10¹²; “mil millones” = 10⁹.</p>
+  <div class="fuente">LBNL 2024, pp. 55 y 57; consumo hídrico directo/eléctrico de todos los centros de datos · DOE: Cooling Tower Management. “Billón” = 10¹²; “mil millones” = 10⁹.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Enfriamiento · el impacto depende del lugar</div>
+  <h2 class="anim" style="font-size:88px">Recircular el refrigerante<br><span class="grad">no significa huella cero.</span></h2>
+  <p class="sub anim" style="margin-top:40px">El calor sale por aire o evaporación.</p>
+  <p class="sub anim" style="margin-top:32px">Importan la cuenca, la estación<br>y el origen del agua.</p>
+  <p class="nota-dato anim" style="margin-top:36px"><strong>Ahorrar agua puede aumentar electricidad.</strong> Evaluar el sistema completo, no sólo una tubería.</p>
+  <div class="fuente">LBNL 2024, pp. 55 y 57 · DOE: Cooling Tower Management. Contexto físico, no coste universal por consulta.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker fuego anim">Electricidad · todos los centros de datos · mundo</div>
+  <h2 class="anim" style="font-size:82px">IA virtual.<br><span class="gradF">Infraestructura muy física.</span></h2>
+  <div class="fila" style="margin-top:30px;gap:36px">
+    <div class="vidrio tarjeta col anim" style="padding:36px"><div class="etq">2025 · estimación histórica</div><div class="num m grad">485</div><h3>TWh al año</h3><p class="mut" style="font-size:30px">Electricidad para servidores e infraestructura de los centros de datos.</p></div>
+    <div class="vidrio tarjeta col anim" style="padding:36px;border-color:rgba(255,122,24,.45)"><div class="etq">2030 · proyección del escenario base</div><div class="num m gradF">≈950</div><h3>TWh al año</h3><p class="mut" style="font-size:30px">≈3% de la demanda eléctrica mundial proyectada. No es consumo actual ni crecimiento inevitable.</p></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:30px"><strong>Estos totales no son “electricidad de la IA”.</strong> La atribución exacta a IA es difícil.<br>Importan la red local, el sistema de enfriamiento y la matriz eléctrica que determina emisiones.</p>
+  <div class="fuente">IEA, Key Questions on Energy and AI, 16 abr 2026, p. 10 y anexo A. 950 redondea 945 TWh del anexo. Modelos de estimación/proyección, no censo completo de medidores.</div>
+  
+</section>
+<section class="centro" data-auto-animate>
+  <div class="kicker fuego anim" data-id="contra">Lo que me han dicho clientes</div>
+  <p class="cita anim" style="text-align:center;font-size:84px">Es más inteligente que yo en la mayoría de las cosas. ¿Por qué debería contratar a algún programador?</p>
+  
+</section>
+<section class="medio" data-auto-animate>
+  <div class="kicker anim" data-id="contra">El límite que más me importa</div>
+  <h1 class="anim" style="font-size:150px">Un genio <span class="grad">con amnesia</span></h1>
+  <div class="fila" style="margin-top:40px">
+    <div class="vidrio tarjeta col anim"><h3>Memoria externa</h3><p class="mut" style="font-size:28px">archivos e historial pueden persistir; recuperar contexto sigue siendo un problema</p></div>
+    <div class="vidrio tarjeta col anim"><h3>Aprendizaje continuo</h3><p class="mut" style="font-size:28px">guardar notas ≠ actualizar pesos con cada tarea · Karpathy, oct 2025</p></div>
+    <div class="vidrio tarjeta col anim" style="border-color:color-mix(in srgb,var(--cian) 40%,transparent)"><h3 class="grad">Trabajo de ingeniero</h3><p class="mut" style="font-size:28px">contexto · qué problema importa · verificar · responder</p></div>
+  </div>
+  <p class="fragment g sub" style="margin-top:40px">No es “relájense”. Es <strong class="gradF">“suban de nivel ya”</strong>.</p>
+  
+</section>
+<section class="tesis" data-transition="fade">
+  <div class="icono anim">↩ Tesis</div>
+  <blockquote class="anim">Podría ser <span class="grad">la última revolución que hagamos solo los humanos</span>.<br><span class="mut">Los límites son reales. No sabemos cuándo cederán.</span></blockquote>
+  <div class="barra anim"></div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="fila" style="align-items:center;gap:80px">
+    
+    <div><div class="kicker anim">08 · Los científicos ya trabajan así</div><h2 class="anim" style="font-size:96px">Terence Tao</h2>
+      <h3 class="anim">UCLA · medalla Fields</h3><p class="sub anim" style="margin-top:30px">IA para literatura, código y pruebas formales en Lean. Problema de Erdős #1196, verificado y generalizado por matemáticos.</p>
+      <div class="chip anim" style="margin-top:20px">Erdős #1196 · mayo 2026</div>
+      <div class="persona-inline anim"><img class="retrato retrato-mini" data-persona="paul-erdos" src="img/personas/paul-erdos.png" alt="Paul Erdős" width="400" height="500"><span>Paul Erdős · problema #1196</span></div></div>
+  </div>
+  <div class="fuente">fuentes.md, sección 1 · corte del repositorio: 2 oct 2026 · sin nueva consulta externa.</div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="fila" style="align-items:center;gap:80px">
+    
+    <div><div class="kicker anim">Los científicos ya trabajan así</div><h2 class="anim" style="font-size:96px">David Baker</h2>
+      <h3 class="anim">Universidad de Washington · Nobel de Química 2024</h3><p class="sub anim" style="margin-top:30px">Diseño computacional de proteínas nuevas. RFdiffusion3: herramienta abierta, dic 2025.</p>
+      <div class="chip anim" style="margin-top:20px">herramienta de diseño · no validación automática</div>
+      </div>
+  </div>
+  <div class="fuente">fuentes.md, sección 1 · corte del repositorio: 2 oct 2026 · sin nueva consulta externa.</div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="fila" style="align-items:center;gap:80px">
+    
+    <div><div class="kicker anim">Los científicos ya trabajan así</div><h2 class="anim" style="font-size:96px">Clare Bryant</h2>
+      <h3 class="anim">Cambridge · inmunología</h3><p class="sub anim" style="margin-top:30px">Co-Scientist de DeepMind le priorizó una proteína para investigar. La hipótesis debe probarse experimentalmente.</p>
+      <div class="chip anim" style="margin-top:20px">Proyección: 2–3 años → 6 meses, si se confirma</div>
+      </div>
+  </div>
+  <div class="fuente">fuentes.md, sección 1 · corte del repositorio: 2 oct 2026 · sin nueva consulta externa.</div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="fila" style="align-items:center;gap:80px">
+    
+    <div><div class="kicker anim">Los científicos ya trabajan así</div><h2 class="anim" style="font-size:96px">Hosea Nelson</h2>
+      <h3 class="anim">Caltech · química</h3><p class="sub anim" style="margin-top:30px">ELECTRA: proyecto de laboratorio remoto con robots, científicos y agentes. Meta: estructuras moleculares en menos de un minuto.</p>
+      <div class="chip anim" style="margin-top:20px">US$17 millones · NSF · proyecto y meta, no resultado</div>
+      </div>
+  </div>
+  <div class="fuente">fuentes.md, sección 1 · corte del repositorio: 2 oct 2026 · sin nueva consulta externa.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <h2 class="anim" style="font-size:96px">La IA <span class="grad">genera</span>.<br>El humano <span class="gradF">verifica</span> y decide qué importa.</h2>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="fila" style="align-items:center;gap:80px">
+    
+    <div>
+      <div class="kicker anim">Risa Wechsler · astrofísica, Stanford</div>
+      <p class="cita anim" style="font-size:58px">La IA cambia qué problemas son abordables, pero no nos dice qué problemas importan.</p>
+    </div>
+  </div>
+  <div class="fragment capa-tesis"><div class="ct-in"><div class="icono">↩ Tesis</div><blockquote>Resultados, herramientas y proyectos.<br><span class="grad">Potencial para acelerar la ciencia</span>.<br><span class="mut">No todas las promesas son resultados.</span></blockquote><div class="barra"></div></div></div>
+  
+</section>
+<section data-transition="fade">
+  <div class="kicker anim">09 · Qué significa para ustedes</div>
+  <h2 class="anim" style="font-size:72px">Lo medido. <span class="grad">Lo que aún no sabemos.</span></h2>
+  <div class="embudo" style="margin-top:40px">
+    <div class="nivel" style="width:100%"><b>ChatGPT · usuarios semanales</b><span>1,200 millones · 29 sep 2026</span></div>
+    <div class="nivel" style="width:100%"><b>ChatGPT · suscriptores de pago</b><span>50 millones · feb 2026</span></div>
+    <div class="nivel" style="width:100%;background:linear-gradient(90deg,rgba(255,122,24,.2),rgba(255,193,90,.12));border-color:rgba(255,122,24,.45)"><b>Integración profunda en el trabajo</b><span>No medida aquí</span></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:22px">Fechas distintas. Pagar ChatGPT <strong>no acota el uso significativo de IA</strong>; no es un embudo de productividad.</p>
+  <div class="fuente">Cifras de OpenAI vía The Verge (sep) y TechCrunch (feb). Fechas distintas; sin porcentaje inventado de integración laboral. Referencias conservadas en fuentes.md.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Microsoft · difusión de IA · junio 2026</div>
+  <h2 class="anim" style="font-size:84px">El acceso y el uso<br><span class="grad">no son uniformes.</span></h2>
+  <div class="fila" style="margin-top:50px;gap:60px">
+    <div class="col anim"><div class="etq">Sur Global</div><div class="num l gradF">16.2%</div></div>
+    <div class="col anim"><div class="etq">Norte Global</div><div class="num l grad">28.8%</div></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:40px">Población de 15–64 años; otra población y método.<br>No comparar directamente con usuarios o suscriptores de ChatGPT ni inferir integración laboral.</p>
+  <div class="fuente">Microsoft, difusión de IA, junio 2026; población de 15–64 años. Referencia conservada en fuentes.md; otra población y método.</div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="kicker anim">¿Qué hago con mi carrera? · habilidades 1–3 de 5</div>
+  <h2 class="anim" style="font-size:76px">Fundamentos, dirección y verificación</h2>
+  <ol class="lista" style="margin-top:40px;counter-reset:i 0"><li class="fragment g"><div>Fundamentos<span class="d">expliquen el resultado sin IA y respondan preguntas: la prueba de Tao</span></div></li><li class="fragment g"><div>Dirijan agentes<span class="d">criterios de aceptación, pruebas y herramientas permitidas; autorización para datos sensibles</span></div></li><li class="fragment g"><div>Verifiquen<span class="d">fuentes, unidades y casos límite; tests que pasan no bastan</span></div></li></ol>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="kicker anim">¿Qué hago con mi carrera? · habilidades 4–5 de 5</div>
+  <h2 class="anim" style="font-size:76px">Un problema real. Un resultado medible.</h2>
+  <ol class="lista" style="margin-top:40px;counter-reset:i 3"><li class="fragment g"><div>Un dominio y una persona usuaria<span class="d">acuerden qué problema importa y qué resultado sirve</span></div></li><li class="fragment g"><div>Construyan y midan<span class="d">tiempo con revisión, defectos y costo por tarea aceptada; publiquen con permiso</span></div></li></ol>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker fuego anim">La píldora negra · desestimar lo que ya puedes construir</div>
+  <h2 class="anim" style="font-size:88px">No seas un <span class="gradF">perdedor.</span></h2>
+  <p class="sub anim" style="margin-top:24px">Tienes a tu alcance decenas de agentes para construir productos y proyectos digitales.</p>
+  <div class="fila" style="margin-top:34px;gap:36px">
+    <div class="vidrio tarjeta col anim" style="padding:32px">
+      <div class="etq">Desestimar</div><h3>“Eso no sirve. Es puro hype.”</h3>
+      <p class="mut" style="font-size:32px;line-height:1.4">Tener herramientas capaces de ayudarte a construir y dedicarte sólo a demeritarlas.</p>
+    </div>
+    <div class="vidrio tarjeta col anim" style="padding:32px">
+      <div class="etq">Construir</div><h3>Una idea. Un equipo de agentes.</h3>
+      <p class="mut" style="font-size:32px;line-height:1.4">Elige un proyecto, reparte tareas, prueba el resultado y conviértelo en algo útil.</p>
+    </div>
+  </div>
+  <p class="sub anim" style="font-size:46px;margin-top:30px"><strong>Deja de demeritar la oportunidad. Ponlos a trabajar.</strong></p>
+  <div class="fuente">Mensaje del ponente, no una garantía de resultados. Diriges el objetivo, verificas el trabajo y decides qué sirve. Criticar con evidencia no es desestimar sin probar.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Un paso concreto para empezar</div>
+  <h2 class="anim" style="font-size:84px">Empieza a usar <span class="grad">Linux.</span></h2>
+  <p class="sub anim" style="margin-top:24px">Entiende el entorno donde ejecutas herramientas y agentes.</p>
+  <div class="fila" style="margin-top:36px;gap:28px">
+    <div class="vidrio tarjeta col anim"><div class="etq">Prueba primero</div><h3>Ubuntu LTS</h3><p class="mut" style="font-size:30px">Sesión en vivo desde USB o máquina virtual; sin reemplazar tu sistema.</p></div>
+    <div class="vidrio tarjeta col anim"><div class="etq">Si usas Windows</div><h3>WSL 2</h3><p class="mut" style="font-size:30px">Un entorno Linux para trabajar sin abandonar Windows.</p></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:30px"><strong>Antes de instalar o crear el USB: respaldo y revisión de compatibilidad.</strong></p>
+  <div class="fuente">Canonical: “Try Ubuntu Desktop” · Microsoft Learn: “What is Windows Subsystem for Linux”. Recomendación de aprendizaje, no requisito para usar IA.</div>
+  
+</section>
+<section class="medio" data-transition="slide">
+  <div class="kicker anim">Linux · aprende haciendo</div>
+  <h2 class="anim" style="font-size:88px">Un proyecto pequeño.<br><span class="grad">Un entorno que entiendes.</span></h2>
+  <p class="sub anim" style="margin-top:40px">Terminal · Git · permisos · procesos · logs.</p>
+  <p class="sub anim" style="margin-top:32px"><strong>Ejecuta y explica el resultado.</strong></p>
+  <p class="nota-dato anim" style="margin-top:30px"><strong>Antes de instalar o crear el USB: respaldo y revisión de compatibilidad.</strong><br>Linux no sustituye los fundamentos; es un entorno para aprenderlos.</p>
+  <div class="fuente">Canonical: “Try Ubuntu Desktop” · Microsoft Learn: “What is Windows Subsystem for Linux”. Recomendación de aprendizaje, no requisito para usar IA.</div>
+  
+</section>
+<section class="centro" data-transition="fade">
+  <p class="cita anim" style="text-align:center">La catástrofe no son las nubes de hongo. Es que todos nos volvamos tontos.</p>
+  <p class="autor anim"><b>Douglas Finkbeiner</b> · astrónomo, Harvard</p>
+  <p class="fragment g sub" style="margin-top:40px;text-align:center">Usen la IA para <strong class="grad">pensar más</strong>, no para dejar de pensar.</p>
+  <div class="fragment capa-tesis"><div class="ct-in"><div class="icono">↩ Tesis</div><blockquote>El cambio es rápido.<br><span class="grad">Aprender a verificar y resolver problemas reales</span><br>vale más que perseguir cada lanzamiento.</blockquote><div class="barra"></div></div></div>
+  
+</section>
+<section data-transition="fade">
+  <div class="kicker fuego anim">De regreso a la escalera</div>
+  <div class="graf" data-graf="g2" data-entrada="retorno" data-opc='{"soloFrontera":true}' style="height:800px;margin-top:20px"><canvas></canvas><img class="respaldo" src="img/02_indice_inteligencia_AA.png" alt=""></div>
+  <div class="fuente">AA v4.3.2 · frontera = máximo acumulado · 29.1 estimado → 57.6: +28.5 puntos, no doble capacidad. Corte del repositorio: 2 oct 2026.</div>
+  
+</section>
+<section class="centro" data-escena="cierre" data-transition="fade">
+  <p class="cita anim" style="font-size:92px;max-width:1500px;text-align:center">Hay décadas en las que no pasa nada, y semanas en las que pasan décadas.</p>
+  <p class="fragment g sub" style="text-align:center;margin-top:40px">Nosotros estamos en <strong class="gradF">una de esas semanas</strong>.</p>
+  
+</section>
+<section class="medio" data-escena="cierre" data-transition="slide">
+  <div class="kicker anim">Tres tareas para esta semana</div>
+  <ol class="lista"><li class="fragment g"><div>Prueben Linux y un agente en una tarea acotada<span class="d">Ubuntu en sesión de prueba, una VM o WSL 2; criterios y permisos, sin datos sensibles; revisen y anoten tiempo total y costo</span></div></li><li class="fragment g"><div>Verifiquen una afirmación sobre IA<span class="d">fuente original, fecha, población, métrica y qué no demuestra</span></div></li><li class="fragment g"><div>Escojan un problema de la Mixteca con alguien que lo vive<span class="d">comparar con el método actual: tiempo con revisión, defectos y costo por tarea aceptada</span></div></li></ol>
+  
+</section>
+<section class="centro" data-escena="cierre" data-transition="fade">
+  <h2 class="anim" style="font-size:96px;text-align:center">Sean quienes <span class="grad">entienden</span> la magia<br>y la <span class="gradF">construyen</span>.</h2>
+  <p class="sub anim" style="text-align:center;margin-top:30px">Ustedes llegaron a tiempo.</p>
+  <h1 class="fragment g" style="margin-top:50px">Gracias.</h1>
+  <div class="anim" style="margin-top:30px"><a class="chip" href="https://github.com/hendrixmar" target="_blank" rel="noopener noreferrer">github.com/hendrixmar</a></div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Fuentes · evaluaciones, código y profesión</div>
+  <h2 class="anim" style="font-size:76px">De dónde salen las mediciones.</h2>
+  <div class="fila anim" style="gap:70px;font-size:32px;line-height:1.5;margin-top:40px">
+    <div class="col"><h3>Evaluación</h3>METR · Artificial Analysis<br>Epoch AI · Vals AI<br>System cards: Anthropic, OpenAI,<br>Google, Qwen, Moonshot, Z.ai<br>SWE-bench · OpenAI (blog)</div>
+    <div class="col"><h3>Código e ingeniería</h3>GitHub blog · Innovation Graph · Octoverse 2025<br>Powerset github-coding-agent-tracker<br>IEEE-CS/ACM · Uncle Bob/Aviator<br>Google Security/OSS-Fuzz · Stenberg/curl<br>METR (productividad 2025 + 2026)<br>SymPy · GitHub (uso responsable/licencias)</div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:32px">URL y límites: <strong>fuentes.md</strong> · corte: 2 oct 2026.<br>Datos: <strong>graficas/datos_graficas.csv</strong> · informe: <strong>investigacion_ia_codigo_abierto.md</strong>.</p>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">Fuentes · adopción, ambiente y contexto</div>
+  <h2 class="anim" style="font-size:76px">De dónde salen los límites.</h2>
+  <div class="fila anim" style="gap:70px;font-size:32px;line-height:1.5;margin-top:40px">
+    <div class="col"><h3>Adopción y contexto</h3>Stack Overflow (abr 2026)<br>Fed de San Luis · UIT<br>FMI (jul 2026) · Microsoft (difusión de IA)<br><i>Nature</i> (dic 2025) · Clarke (1968/1973)</div>
+    <div class="col"><h3>Agua, energía y entorno</h3>GCSAA (riego 2024) · LBNL (centros 2023)<br>IEA (Energy and AI, 2026)<br>DOE (enfriamiento)<br>Canonical (Ubuntu) · Microsoft Learn (WSL)</div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:32px">URL, créditos de fotografías y permisos: <strong>fuentes.md</strong>.<br>Informe: <strong>investigacion_impacto_ambiental.md</strong>. Consultas nuevas no revalidan toda la base anterior.</p>
+  
+</section>
+<section class="centro" data-escena="cierre" data-transition="fade">
+  <p class="cita anim" style="font-size:86px;text-align:center;max-width:1500px">Cualquier tecnología suficientemente avanzada es indistinguible de la magia.</p>
+  <div class="persona-inline anim"><img class="retrato retrato-mini" data-persona="arthur-c-clarke" src="img/personas/arthur-c-clarke.png" alt="Arthur C. Clarke" width="400" height="500"><p class="autor" style="margin:0"><b>Arthur C. Clarke</b> · tercera ley</p></div>
+  <p class="sub anim" style="margin-top:40px;text-align:center">Entiendan la magia. <strong class="grad">Construyan con ella.</strong></p>
+  <div class="fuente">Clarke, carta a <i>Science</i> (1968) y <i>Profiles of the Future</i> (ed. revisada, 1973).</div>
+  
+</section>
+<section class="centro" data-preguntas="tablero"><h1 class="anim">¿Preguntas?</h1><p class="sub anim" style="margin-top:44px;max-width:1400px;text-align:center">Conversemos sobre capacidades, límites y responsabilidad humana.</p></section>
+</div></div>
+<script src="vendor/three.min.js"></script>
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/chart.umd.js"></script>
+<script src="vendor/reveal.js"></script>
+
+<script src="data/datos.js"></script>
+<script src="js/escenas.js"></script>
+<script src="js/graficas.js"></script>
+
+
+
+
+<script src="js/app.js"></script>
+<a href="creditos.txt" style="position:fixed;left:18px;bottom:14px;z-index:5;color:#aeb8c7;font:12px sans-serif">Créditos de fotografías</a>
+</body>
+</html>

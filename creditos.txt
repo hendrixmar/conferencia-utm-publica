@@ -1,0 +1,11 @@
+Fotografías de esta edición pública
+
+| Archivo / persona | Fuente y crédito | Licencia / cambios |
+|---|---|---|
+| `robert-c-martin.png` · Robert C. Martin | [Commons](https://commons.wikimedia.org/wiki/File:Robert_C._Martin_surrounded_by_computers_(cropped).jpg), Angelacleancoder; recorte PhotographyEdits | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); reducción y conversión del recorte |
+| `arthur-c-clarke.png` · Arthur C. Clarke | [Commons](https://commons.wikimedia.org/wiki/File:Arthur_C._Clarke_1965.jpg), ITU Pictures | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/); recorte y conversión |
+| `daniel-stenberg.png` · Daniel Stenberg | [Fotografías oficiales](https://daniel.haxx.se/photos.html), Daniel Stenberg, “on green, cropped” | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); reducción y conversión |
+| `klaus-schwab.png` · Klaus Schwab | [Commons](https://commons.wikimedia.org/wiki/File:Klaus_Schwab_(cropped).jpg), World Economic Forum / swiss-image.ch / Remy Steinegger; recorte Ellie Rodriguez | [CC BY-SA 2.0](https://creativecommons.org/licenses/by-sa/2.0/); reducción y conversión del recorte |
+| `paul-erdos.png` · Paul Erdős | [Commons](https://commons.wikimedia.org/wiki/File:Paul_Erd%C5%91s.jpg), Kmhkmh; recorte בר | [CC BY 3.0](https://creativecommons.org/licenses/by/3.0/); conversión del recorte |
+
+Las fotografías conservan sus licencias originales.
