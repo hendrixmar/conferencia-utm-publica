@@ -115,11 +115,13 @@ function crearTitulo(variante){
   function aRed(){pts.userData.ir(rd,cR,2.6);animar(lm,{opacity:.12,duration:2.4,delay:1.2});}
   function aNube(){pts.userData.ir(nube,cN,2.6);animar(lm,{opacity:0,duration:1});}
   return {scene,cam,
-    set(e){if(e!==estado){estado=e;fase=-1;}},
+    set(e){if(e!==estado){estado=e;fase=-1;if(variante==='titulo')e>0?aRed():aNube();}},
     salir(){estado=-1;},
     tick(t){
-      const siguiente=movimiento.matches?0:Math.floor(t/10)%2;
-      if(siguiente!==fase){fase=siguiente;fase===0?aRed():aNube();}
+      if(variante==='cierre'){
+        const siguiente=movimiento.matches?0:Math.floor(t/10)%2;
+        if(siguiente!==fase){fase=siguiente;fase===0?aRed():aNube();}
+      }
       pts.material.uniforms.uT.value=t;
       pts.rotation.y=Math.sin(t*.12)*.3+(movimiento.matches?0:raton.x*.18);
       pts.rotation.x=movimiento.matches?0:raton.y*.08;lineas.rotation.copy(pts.rotation);
@@ -132,7 +134,7 @@ function crearFuego(){
   const N=5000,pts=nubeMorph(N);const grupo=new THREE.Group();grupo.position.x=2.9;scene.add(grupo);grupo.add(pts);
   const esf=formaEsfera(N,2.3),cEsf=colGrad(N,(i,t)=>t.copy(C1).lerp(C3,Math.random()*.7));
   const ani=formaAnillos(N,7,2.7),cAni=colGrad(N,(i,t)=>t.copy(C2).lerp(C1,Math.random()*.6).lerp(CF,(i%9===0)?0.7:0));
-  pts.userData.fijar(esf,cEsf); pts.material.uniforms.uFuego.value=1;
+  pts.userData.fijar(esf,cEsf);
   // arcos de internet
   const ap=[];const nodos=[];for(let i=0;i<70;i++){const j=Math.floor(Math.random()*N);nodos.push(new THREE.Vector3(esf[j*3],esf[j*3+1],esf[j*3+2]));}
   for(let i=0;i<110;i++){const a=nodos[Math.floor(Math.random()*nodos.length)],b=nodos[Math.floor(Math.random()*nodos.length)];if(a.distanceTo(b)<.5)continue;
@@ -148,7 +150,7 @@ function crearFuego(){
   const bordes=new THREE.LineSegments(new THREE.EdgesGeometry(nucleo.geometry),new THREE.LineBasicMaterial({color:0xb4c6d4,transparent:true,opacity:0}));nucleo.add(bordes);
   let estado=-1;
   return {scene,cam,
-    set(e){ if(e===estado)return; estado=e; const u=pts.material.uniforms;
+    set(e){ if(e===estado)return; const u=pts.material.uniforms;if(estado<0&&e<=0)u.uFuego.value=0;estado=e;
       if(e<=0){animar(u.uFuego,{value:1,duration:1.6,ease:'power2.inOut'});animar(am,{opacity:0,duration:.6});animar(nucleo.material,{opacity:0,duration:.6});animar(cam.position,{z:8.5,duration:2});}
       else if(e===1){pts.userData.ir(esf,cEsf,2.2);animar(u.uFuego,{value:0,duration:2.2,ease:'power3.inOut'});animar(am,{opacity:.28,duration:1.5,delay:1.4});animar(nucleo.material,{opacity:0,duration:.6});animar(cam.position,{z:8,duration:2});}
       else{animar(u.uFuego,{value:0,duration:1});pts.userData.ir(ani,cAni,2.4);animar(am,{opacity:0,duration:1});animar(nucleo.material,{opacity:.95,duration:1.5,delay:1});animar(cam.position,{z:9,duration:2.4});}
@@ -257,7 +259,7 @@ function dibujarRespaldo(n,e){
     dibujo+=textoSVG(1440,820,['Fuego','Internet','Agentes'][Math.min(2,e)],38);
   }else{
     dibujo='<g fill="#6da9ed" stroke="#6da9ed" opacity=".25">';
-    for(let i=0;i<6;i++)for(let j=0;j<3;j++){const x=1080+i*110,y=865+j*50;dibujo+=`<circle cx="${x}" cy="${y}" r="4"/>`;if(i<5)dibujo+=`<path d="M ${x} ${y} L ${x+110} ${865+(j+1)%3*50}" fill="none"/>`;}
+    for(let i=0;i<6;i++)for(let j=0;j<3;j++){const x=1080+i*110,y=865+j*50;dibujo+=`<circle cx="${x}" cy="${y}" r="4"/>`;if((n==='cierre'||e>0)&&i<5)dibujo+=`<path d="M ${x} ${y} L ${x+110} ${865+(j+1)%3*50}" fill="none"/>`;}
     dibujo+='</g>';
   }
   canvas.innerHTML=`<title>${descripciones[n]} Ilustración simplificada: WebGL no disponible.</title>${dibujo}`;

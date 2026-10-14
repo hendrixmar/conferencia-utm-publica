@@ -17,12 +17,12 @@
 <div class="reveal"><div class="slides">
 <section class="centro" data-escena="titulo" data-transition="fade">
   <p class="cita anim" style="font-size:82px;max-width:1700px;text-align:center">Hay décadas en las que no pasa nada,<br>y semanas en las que pasan décadas.</p>
-  <p class="fragment g sub" style="text-align:center;margin-top:44px">Esta charla es sobre <strong class="gradF">una de esas semanas</strong>.<br><span class="mut" style="font-size:28px">Una imagen de velocidad, no una medida.</span></p>
+  <p class="fragment g sub" data-estado="1" style="text-align:center;margin-top:44px">Esta charla es sobre <strong class="gradF">una de esas semanas</strong>.<br><span class="mut" style="font-size:28px">Una imagen de velocidad, no una medida.</span></p>
   
 </section>
 <section class="centro" data-escena="titulo" data-transition="fade">
   <h1 class="anim" style="font-size:112px;line-height:1.06;max-width:1650px;text-align:center">La quinta<br><span class="gradF">revolución industrial</span></h1>
-  <p class="fragment g sub" style="margin-top:44px;font-size:54px;text-align:center">¿Y si ya no somos <strong>los únicos inventores</strong>?<br><span class="mut" style="font-size:28px">Una hipótesis sobre agentes, descubrimiento y responsabilidad humana.</span></p>
+  <p class="fragment g sub" data-estado="1" style="margin-top:44px;font-size:54px;text-align:center">¿Y si ya no somos <strong>los únicos inventores</strong>?<br><span class="mut" style="font-size:28px">Una hipótesis sobre agentes, descubrimiento y responsabilidad humana.</span></p>
   <p class="mut" style="margin-top:36px;font-size:28px;text-align:center">Hendrik Martina · Universidad Tecnológica de la Mixteca</p>
   
 </section>
@@ -387,7 +387,7 @@
   <div class="barra anim"></div>
   
 </section>
-<section data-escena="fuego" data-transition="fade" class="medio">
+<section data-escena="fuego" data-estado="0" data-transition="fade" class="medio">
   <div class="izq" style="max-width:880px">
     <div class="kicker fuego anim">Después de la evidencia · mi hipótesis</div>
     <h2 class="anim" style="font-size:92px">¿Más transformadora que el <span class="gradF">fuego</span> y el <span class="grad">internet</span>?</h2>
@@ -454,11 +454,11 @@
   <div class="barra anim"></div>
   
 </section>
-<section data-escena="revoluciones" data-transition="fade">
+<section data-escena="revoluciones" data-estado="1" data-transition="fade">
   <div class="kicker anim">06 · Las revoluciones industriales</div>
   <h2 class="anim" style="font-size:76px;max-width:1100px">Del músculo a la <span class="grad">cognición</span></h2>
   <div class="vidrio" style="position:absolute;left:120px;bottom:100px;width:640px;padding:6px 30px">
-    <ol class="lista compacta"><li class="fragment g" data-estado="1"><div>Vapor y mecanización<span class="d">la máquina amplía el músculo</span></div></li><li class="fragment g" data-estado="2"><div>Electricidad, acero, ensamble<span class="d">energía a escala</span></div></li><li class="fragment g" data-estado="3"><div>Electrónica y computadoras<span class="d">automatización programada</span></div></li><li class="fragment g" data-estado="4"><div>Digital + físico + biológico<span class="d"><img class="retrato retrato-linea" data-persona="klaus-schwab" src="img/personas/klaus-schwab.png" alt="Klaus Schwab" width="400" height="500">Klaus Schwab, 2016</span></div></li><li class="fragment g" data-estado="5"><div>Agentes · mi marco<span class="d">trabajo cognitivo con herramientas</span></div></li></ol>
+    <ol class="lista compacta"><li class="anim" data-estado="1"><div>Vapor y mecanización<span class="d">la máquina amplía el músculo</span></div></li><li class="fragment g" data-estado="2"><div>Electricidad, acero, ensamble<span class="d">energía a escala</span></div></li><li class="fragment g" data-estado="3"><div>Electrónica y computadoras<span class="d">automatización programada</span></div></li><li class="fragment g" data-estado="4"><div>Digital + físico + biológico<span class="d"><img class="retrato retrato-linea" data-persona="klaus-schwab" src="img/personas/klaus-schwab.png" alt="Klaus Schwab" width="400" height="500">Klaus Schwab, 2016</span></div></li><li class="fragment g" data-estado="5"><div>Agentes · mi marco<span class="d">trabajo cognitivo con herramientas</span></div></li></ol>
   </div>
   <div class="fragment g" data-estado="6" style="position:absolute;right:120px;bottom:120px;max-width:620px;text-align:right"><p class="sub"><strong class="grad">¿De escalones a rampa?</strong><br>Una hipótesis, no un destino inevitable.</p></div>
   
@@ -549,16 +549,11 @@
   <div class="fuente">IEA, Key Questions on Energy and AI, 16 abr 2026, p. 10 y anexo A. 950 redondea 945 TWh del anexo. Modelos de estimación/proyección, no censo completo de medidores.</div>
   
 </section>
-<section class="centro" data-auto-animate>
-  <div class="kicker fuego anim" data-id="contra">Lo que me han dicho clientes</div>
-  <p class="cita anim" style="text-align:center;font-size:84px">Es más inteligente que yo en la mayoría de las cosas. ¿Por qué debería contratar a algún programador?</p>
-  
-</section>
 <section class="medio" data-auto-animate>
   <div class="kicker anim" data-id="contra">El límite que más me importa</div>
   <h1 class="anim" style="font-size:120px">No tengo una <span class="gradF">respuesta cómoda.</span></h1>
   <div class="fila" style="margin-top:40px">
-    <div class="vidrio tarjeta col anim"><h3>El cliente tiene razón en algo</h3><p class="mut" style="font-size:28px">un prototipo que funciona cuesta una fracción; ya no necesita contratar a quien teclee código</p></div>
+    <div class="vidrio tarjeta col anim"><h3>Mi observación con clientes</h3><p class="mut" style="font-size:28px">un prototipo que funciona cuesta una fracción; el valor no está sólo en teclear código</p></div>
     <div class="vidrio tarjeta col anim"><h3>Lo que se vende peor</h3><p class="mut" style="font-size:28px">la hora de programación · y no sólo la nuestra: texto, análisis y código bajo pedido</p></div>
     <div class="vidrio tarjeta col anim" style="border-color:rgba(255,122,24,.45)"><h3 class="gradF">Lo que nadie garantiza</h3><p class="mut" style="font-size:28px">que lo que queda (entender, decidir, responder) se lo paguen a ustedes por el título</p></div>
   </div>
