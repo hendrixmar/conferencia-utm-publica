@@ -231,3 +231,18 @@ section.preguntas-vivo{display:grid!important;grid-template-columns:420px 1fr;gr
   .fragment.senal h2{filter:none}
   section.ruido-slide:has(.senal.visible) .ruido{transform:none}
 }
+/* Puente de transición en los separadores de capítulo y titulares sensacionalistas de la cascada. */
+.puente{margin-top:34px;font-size:30px;line-height:1.4;color:var(--mut);max-width:1500px}
+.puente b{color:var(--txt);font-weight:600}
+.ruido span.sensa{font-weight:800;font-stretch:118%;text-transform:uppercase;letter-spacing:.03em;color:var(--fuego2);border-color:rgba(255,180,92,.4);background:rgba(28,16,6,.92)}
+
+/* demo grabada */
+video{display:block;width:auto;max-width:100%;max-height:700px;margin:0 auto;border-radius:14px;border:1px solid var(--borde);background:#000}
+/* mano alzada */
+.mano{display:inline-block;margin:6px 0 18px;padding:12px 28px;border-radius:999px;font-family:var(--display);font-weight:700;font-size:34px;color:var(--fuego2);border:1px solid color-mix(in srgb,var(--fuego2) 55%,transparent);background:rgba(255,160,60,.08)}
+.mano b{color:#fff}
+/* tríos de dominios */
+.trio .col{flex:1;min-width:0;display:flex;flex-direction:column}
+.trio .kicker{font-size:21px;white-space:normal;line-height:1.25;min-height:54px}
+.trio .mini .mv{font-size:30px;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.trio .mini{padding:16px 20px 12px}

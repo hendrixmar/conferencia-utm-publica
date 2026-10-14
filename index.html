@@ -15,17 +15,22 @@
 <button id="sonido" type="button" aria-pressed="false" title="Activar efectos de sonido suaves">Sonido: apagado</button>
 <canvas id="escena"></canvas>
 <div class="reveal"><div class="slides">
-<section class="centro" data-escena="titulo" data-transition="fade" data-auto-animate>
+<section class="centro" data-escena="titulo" data-transition="fade">
+  <p class="cita anim" style="font-size:82px;max-width:1700px;text-align:center">Hay décadas en las que no pasa nada,<br>y semanas en las que pasan décadas.</p>
+  <p class="fragment g sub" style="text-align:center;margin-top:44px">Esta charla es sobre <strong class="gradF">una de esas semanas</strong>.<br><span class="mut" style="font-size:28px">Una imagen de velocidad, no una medida.</span></p>
+  
+</section>
+<section class="centro" data-escena="titulo" data-transition="fade">
   <h1 class="anim" style="font-size:112px;line-height:1.06;max-width:1650px;text-align:center">La quinta<br><span class="gradF">revolución industrial</span></h1>
   <p class="fragment g sub" style="margin-top:44px;font-size:54px;text-align:center">¿Y si ya no somos <strong>los únicos inventores</strong>?<br><span class="mut" style="font-size:28px">Una hipótesis sobre agentes, descubrimiento y responsabilidad humana.</span></p>
   <p class="mut" style="margin-top:36px;font-size:28px;text-align:center">Hendrik Martina · Universidad Tecnológica de la Mixteca</p>
   
 </section>
-<section class="medio" data-escena="titulo" data-auto-animate>
+<section class="medio" data-escena="titulo" data-transition="fade">
   <div class="persona-cabecera">
     <div>
-      <p data-id="frase" class="mut" style="font-size:30px;font-family:var(--display);max-width:1100px">“Hay décadas en las que no pasa nada, y semanas en las que pasan décadas.”</p>
-      <h1 class="anim" style="margin-top:60px">Hendrik <span class="grad">Martina</span></h1>
+      <div class="kicker anim">Quién les habla</div>
+      <h1 class="anim">Hendrik <span class="grad">Martina</span></h1>
       <p class="sub anim">Ingeniero de plataforma e infraestructura de IA · Truelogic Software</p>
       <p class="sub anim">Cofundador de Artesanos Digitales / IA SOFT</p>
       <div class="anim" style="margin-top:50px"><span class="chip">Universidad Tecnológica de la Mixteca · Huajuapan de León</span></div>
@@ -34,42 +39,28 @@
   </div>
   
 </section>
-<section data-escena="fuego" data-transition="fade" class="medio">
-  <div class="izq" style="max-width:880px">
-    <div class="kicker fuego anim">Dentro de este marco · una hipótesis sobre velocidad</div>
-    <h2 class="anim" style="font-size:92px">¿Más transformadora que el <span class="gradF">fuego</span> y el <span class="grad">internet</span>?</h2>
-    <h2 class="anim gradF" style="font-size:92px;margin-top:10px">Por su velocidad.</h2>
-    <div style="margin-top:50px;display:flex;flex-direction:column;gap:18px">
-      <div class="vidrio tarjeta anim" style="padding:22px 30px"><b class="gradF" style="font-family:var(--display);font-size:34px">Fuego</b> <span class="mut" style="font-size:26px">· evidencias de uso y encendido separadas por milenios</span></div>
-      <div class="vidrio tarjeta fragment g" data-estado="1" style="padding:22px 30px"><b class="grad" style="font-family:var(--display);font-size:34px">Internet</b> <span class="mut" style="font-size:26px">· 74% del mundo conectado en 2025</span></div>
-      <div class="vidrio tarjeta fragment g" data-estado="2" style="padding:22px 30px"><b style="font-family:var(--display);font-size:34px;color:#c4b5fd">Agentes</b> <span class="mut" style="font-size:26px">· cambios medidos en <strong>10 meses</strong></span></div>
-    </div>
-    <p class="nota-dato anim" style="margin-top:18px">Métricas distintas. No es una prueba de mayor impacto histórico.</p>
-  </div>
-  
-</section>
 <section class="medio" data-transition="fade">
-  <div class="kicker anim">Cómo vamos a examinarla</div>
-  <h2 class="anim">Tres velocidades. <span class="mut">Y sus límites.</span></h2>
+  <div class="kicker anim">La ruta de esta charla</div>
+  <h2 class="anim">Primero la evidencia. <span class="mut">Después, mi hipótesis.</span></h2>
   <div class="fila" style="margin-top:50px">
     <div class="vidrio tarjeta col anim"><div class="num m grad">01</div><h3 style="margin-top:16px">Capacidad</h3><p class="mut" style="font-size:26px">qué tan rápido mejora</p></div>
     <div class="vidrio tarjeta col anim"><div class="num m grad">02</div><h3 style="margin-top:16px">Adopción</h3><p class="mut" style="font-size:26px">qué tan rápido se adopta</p></div>
     <div class="vidrio tarjeta col anim"><div class="num m grad">03</div><h3 style="margin-top:16px">Costo</h3><p class="mut" style="font-size:26px">qué tan rápido se abarata</p></div>
-    <div class="vidrio tarjeta col anim" style="border-color:rgba(255,122,24,.35)"><div class="num m gradF">✕</div><h3 style="margin-top:16px">Contraargumentos</h3><p class="mut" style="font-size:26px">ustedes deciden</p></div>
+    <div class="vidrio tarjeta col anim" style="border-color:rgba(255,122,24,.35)"><div class="num m gradF">✕</div><h3 style="margin-top:16px">Contraargumentos</h3><p class="mut" style="font-size:26px">al final, ustedes deciden</p></div>
   </div>
   <p class="fragment g sub" style="margin-top:56px">La habilidad más importante: <strong class="grad">verificar</strong>. Distinguir dato, interpretación y proyección.</p>
   
 </section>
 <section class="centro" data-preguntas="qr"><h1 class="anim">Tus preguntas también importan.</h1><p class="sub anim" style="margin-top:44px;max-width:1400px;text-align:center">Anota tus preguntas durante la charla. Al final, abrimos la conversación.</p></section>
 <section class="seccion medio" data-transition="zoom">
-  <div class="n anim">01</div><h2 class="anim">Velocidad de capacidad</h2><div class="t anim">Diez meses de cambio medido</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Velocidad 1 de 3 · capacidad</span></div>
+  <div class="n anim">01</div><h2 class="anim">Velocidad de capacidad</h2><div class="t anim">Diez meses de cambio medido</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Velocidad 1 de 3 · capacidad</span></div><p class="puente anim">Antes de cualquier hipótesis, los datos. Empezamos por la pregunta que más ruido genera: <b>¿qué tan rápido mejoran los modelos?</b></p>
   
 </section>
 <section class="ruido-slide" data-transition="fade">
-  <div class="ruido" aria-hidden="true"><span class="" data-o="0.7" style="left:13.9%;top:13.2%;font-size:37px">¿Agentes o chatbots?</span><span class="" data-o="1" style="left:30.0%;top:50.7%;font-size:50px">¿Todo cambió?</span><span class="" data-o="1" style="left:70.0%;top:56.4%;font-size:47px">¿A quién le creo?</span><span class="titular" data-o="1" style="left:5.9%;top:44.3%;font-size:36px">FMI: “La economía global entre las corrientes cruzadas de la guerra y la tecnología”</span><span class="" data-o="0.42" style="left:66.0%;top:28.2%;font-size:28px">¿A qué benchmark le creo?</span><span class="" data-o="0.42" style="left:34.9%;top:68.9%;font-size:28px">¿Quién tiene razón?</span><span class="" data-o="0.7" style="left:78.1%;top:16.1%;font-size:38px">¿Llegué tarde?</span><span class="" data-o="0.42" style="left:27.4%;top:74.0%;font-size:28px">¿Es puro hype?</span><span class="" data-o="0.42" style="left:50.1%;top:82.1%;font-size:26px">¿Es una burbuja?</span><span class="" data-o="0.7" style="left:14.5%;top:37.9%;font-size:33px">¿Y si se equivoca?</span><span class="" data-o="0.7" style="left:37.4%;top:42.4%;font-size:39px">¿Sigo estudiando programación?</span><span class="" data-o="0.42" style="left:63.4%;top:10.1%;font-size:29px">¿Abierto o cerrado?</span><span class="" data-o="0.7" style="left:42.1%;top:80.2%;font-size:36px">¿Qué pasa con los empleos de entrada?</span><span class="" data-o="0.7" style="left:1.7%;top:39.4%;font-size:36px">¿Cuál es el siguiente lanzamiento?</span><span class="" data-o="0.42" style="left:18.6%;top:62.2%;font-size:28px">¿O nada cambió?</span><span class="" data-o="0.7" style="left:16.3%;top:88.7%;font-size:32px">¿Cuándo se detiene?</span><span class="" data-o="0.7" style="left:61.5%;top:85.2%;font-size:33px">¿Cuánto cuesta de verdad?</span><span class="" data-o="1" style="left:23.3%;top:37.3%;font-size:56px">¿Hasta dónde va a llegar?</span><span class="" data-o="1" style="left:19.5%;top:33.5%;font-size:54px">¿Le doy acceso a mi código?</span><span class="" data-o="1" style="left:53.5%;top:63.1%;font-size:54px">¿Esto aplica a mi carrera?</span><span class="" data-o="0.42" style="left:32.5%;top:23.9%;font-size:27px">¿Me va a quitar el trabajo?</span><span class="" data-o="0.42" style="left:52.9%;top:11.9%;font-size:26px">¿Qué es real?</span><span class="" data-o="0.42" style="left:56.0%;top:29.9%;font-size:24px">¿Ya es más inteligente que yo?</span><span class="" data-o="0.42" style="left:19.0%;top:45.2%;font-size:29px">¿Récord o contaminación?</span><span class="" data-o="0.42" style="left:41.6%;top:85.4%;font-size:30px">¿Qué modelo uso esta semana?</span><span class="" data-o="0.42" style="left:35.5%;top:50.9%;font-size:30px">¿Quién lo verifica?</span><span class="" data-o="0.7" style="left:4.5%;top:61.1%;font-size:38px">¿Y la geopolítica?</span><span class="" data-o="0.7" style="left:32.5%;top:7.2%;font-size:34px">¿Ya llegó la AGI?</span><span class="" data-o="0.7" style="left:57.4%;top:37.6%;font-size:34px">¿Lo uso o lo ignoro?</span><span class="" data-o="1" style="left:30.1%;top:78.8%;font-size:45px">¿Me estoy quedando atrás?</span><span class="" data-o="0.42" style="left:32.2%;top:58.2%;font-size:28px">¿Y la privacidad?</span><span class="" data-o="1" style="left:42.2%;top:37.5%;font-size:45px">¿Otro modelo nuevo?</span><span class="" data-o="0.7" style="left:54.6%;top:28.1%;font-size:37px">¿Cuánta agua consume?</span></div>
+  <div class="ruido" aria-hidden="true"><span class="" data-o="0.7" style="left:13.9%;top:13.2%;font-size:37px">¿Agentes o chatbots?</span><span class="" data-o="1" style="left:30.0%;top:50.7%;font-size:50px">¿Todo cambió?</span><span class="" data-o="1" style="left:70.0%;top:56.4%;font-size:47px">¿A quién le creo?</span><span class="titular sensa" data-o="1" style="left:32.4%;top:44.3%;font-size:28px">La IA reemplazará al 90 % de los programadores</span><span class="" data-o="0.42" style="left:66.0%;top:28.2%;font-size:28px">¿A qué benchmark le creo?</span><span class="" data-o="0.42" style="left:34.9%;top:68.9%;font-size:28px">¿Quién tiene razón?</span><span class="" data-o="0.7" style="left:78.1%;top:16.1%;font-size:38px">¿Llegué tarde?</span><span class="" data-o="0.42" style="left:27.4%;top:74.0%;font-size:28px">¿Es puro hype?</span><span class="" data-o="0.42" style="left:50.1%;top:82.1%;font-size:26px">¿Es una burbuja?</span><span class="titular sensa" data-o="1" style="left:54.1%;top:33.9%;font-size:28px">Estudiantes: ya no estudien computación</span><span class="" data-o="0.7" style="left:14.5%;top:37.9%;font-size:33px">¿Y si se equivoca?</span><span class="" data-o="0.7" style="left:37.4%;top:42.4%;font-size:39px">¿Sigo estudiando programación?</span><span class="" data-o="0.42" style="left:63.4%;top:10.1%;font-size:29px">¿Abierto o cerrado?</span><span class="" data-o="0.7" style="left:42.1%;top:80.2%;font-size:36px">¿Qué pasa con los empleos de entrada?</span><span class="" data-o="0.7" style="left:1.7%;top:39.4%;font-size:36px">¿Cuál es el siguiente lanzamiento?</span><span class="" data-o="0.42" style="left:18.6%;top:62.2%;font-size:28px">¿O nada cambió?</span><span class="" data-o="0.7" style="left:16.3%;top:88.7%;font-size:32px">¿Cuándo se detiene?</span><span class="" data-o="0.7" style="left:61.5%;top:85.2%;font-size:33px">¿Cuánto cuesta de verdad?</span><span class="titular sensa" data-o="1" style="left:41.5%;top:88.1%;font-size:28px">¡Llegó la AGI!</span><span class="" data-o="1" style="left:23.3%;top:37.3%;font-size:56px">¿Hasta dónde va a llegar?</span><span class="" data-o="1" style="left:19.5%;top:33.5%;font-size:54px">¿Le doy acceso a mi código?</span><span class="" data-o="1" style="left:53.5%;top:63.1%;font-size:54px">¿Esto aplica a mi carrera?</span><span class="titular sensa" data-o="1" style="left:6.7%;top:76.6%;font-size:28px">Récord histórico en todos los benchmarks</span><span class="" data-o="0.42" style="left:32.5%;top:23.9%;font-size:27px">¿Me va a quitar el trabajo?</span><span class="" data-o="0.42" style="left:52.9%;top:11.9%;font-size:26px">¿Qué es real?</span><span class="" data-o="0.42" style="left:56.0%;top:29.9%;font-size:24px">¿Ya es más inteligente que yo?</span><span class="" data-o="0.42" style="left:19.0%;top:45.2%;font-size:29px">¿Récord o contaminación?</span><span class="" data-o="0.42" style="left:41.6%;top:85.4%;font-size:30px">¿Qué modelo uso esta semana?</span><span class="titular sensa" data-o="1" style="left:31.3%;top:46.7%;font-size:28px">La IA se queda sin agua y sin electricidad</span><span class="titular sensa" data-o="1" style="left:53.5%;top:28.9%;font-size:28px">Expertos: la IA es puro humo</span><span class="titular sensa" data-o="1" style="left:46.6%;top:44.6%;font-size:28px">Fin del trabajo humano en cinco años</span><span class="" data-o="0.42" style="left:35.5%;top:50.9%;font-size:30px">¿Quién lo verifica?</span><span class="titular sensa" data-o="1" style="left:18.1%;top:15.5%;font-size:28px">La burbuja de la IA está a punto de reventar</span><span class="titular" data-o="1" style="left:1.5%;top:71.6%;font-size:36px">FMI: “La economía global entre las corrientes cruzadas de la guerra y la tecnología”</span><span class="" data-o="0.7" style="left:4.5%;top:61.1%;font-size:38px">¿Y la geopolítica?</span><span class="" data-o="0.7" style="left:32.5%;top:7.2%;font-size:34px">¿Ya llegó la AGI?</span><span class="titular sensa" data-o="1" style="left:22.5%;top:63.0%;font-size:28px">El modelo que lo cambia todo (otra vez)</span><span class="" data-o="0.7" style="left:57.4%;top:37.6%;font-size:34px">¿Lo uso o lo ignoro?</span><span class="" data-o="1" style="left:30.1%;top:78.8%;font-size:45px">¿Me estoy quedando atrás?</span><span class="titular sensa" data-o="1" style="left:36.9%;top:20.9%;font-size:28px">Un modelo «cobró conciencia»</span><span class="" data-o="0.42" style="left:32.2%;top:58.2%;font-size:28px">¿Y la privacidad?</span><span class="" data-o="1" style="left:42.2%;top:37.5%;font-size:45px">¿Otro modelo nuevo?</span><span class="" data-o="0.7" style="left:54.6%;top:28.1%;font-size:37px">¿Cuánta agua consume?</span></div>
   <div class="fragment senal"><div class="senal-linea"></div>
     <h2>¿Cómo separo la <span class="grad senal-palabra">señal</span> del ruido?</h2></div>
-  <div class="fuente" style="z-index:3">FMI, Perspectivas de la economía mundial, julio de 2026 (título del informe). Las demás preguntas son genéricas, ilustrativas.</div>
+  <div class="fuente" style="z-index:3">FMI, Perspectivas de la economía mundial, julio de 2026 (título real del informe). Preguntas y titulares en mayúsculas: ilustrativos, no citas de medios.</div>
   
 </section>
 <section class="medio" data-transition="slide">
@@ -130,6 +121,16 @@
   </div>
   
 </section>
+<section class="medio" data-transition="fade">
+  <div class="kicker anim">02 · Un agente en 90 segundos · grabación propia</div>
+  <h2 class="anim" style="font-size:64px">Tarea → acción → <span class="gradF">prueba que verifica</span></h2>
+  <div class="vidrio tarjeta anim" style="max-width:1300px"><div class="kicker">Pendiente de grabar · img/demo_agente.mp4</div><p class="sub" style="margin-top:14px">60–90 s · 1920×1080 · sin audio · H.264.<br>En pantalla: la tarea escrita → el agente actúa (herramientas visibles) → corre la prueba → el diff final.</p></div>
+  <div class="fila" style="gap:24px;margin-top:26px;justify-content:center">
+    <span class="chip fragment">1 · la tarea, escrita</span><span class="chip fragment">2 · el agente actúa con herramientas</span><span class="chip fragment">3 · la prueba corre · <b>el humano decide</b></span>
+  </div>
+  <div class="fuente">Grabación propia de una tarea real de Hendrik; un solo tramo por momento, sin cortes dentro de cada tramo. Una demo no es una medición.</div>
+  
+</section>
 <section data-transition="fade">
   <div class="kicker anim">Gráfica 3 · SWE-bench (bugs reales de GitHub)</div>
   <h2 class="anim" style="font-size:60px">Más tareas resueltas. <span class="grad">Mediciones imperfectas.</span></h2>
@@ -143,76 +144,37 @@
   <div class="fragment capa-tesis"><div class="ct-in"><div class="icono">↩ Tesis</div><blockquote>Un récord no basta.<br>Necesitamos evaluaciones que <span class="grad">sigan siendo válidas</span>.</blockquote><div class="barra"></div></div></div>
   
 </section>
-<section data-transition="fade" data-dominio="0">
-  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 1 de 9</div>
-  <h2 class="anim" style="font-size:64px">Matemáticas de investigación</h2>
-  <p class="nota-dato anim">FrontierMath T4 · Epoch AI · 100% de ~41 problemas; no de todas las matemáticas. Escalas distintas: no comparar dominios.</p>
-  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":0}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_01.png" alt="Matemáticas de investigación"></div>
-  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+<section data-transition="fade" data-dominio="0" class="trio">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · grupo 1 de 3</div>
+  <h2 class="anim" style="font-size:56px">Matemáticas de investigación · Ciencia (bio, quím, fís) · Biología computacional</h2>
+  <p class="nota-dato anim">Matemáticas: 100% de ~41 problemas, no de todas las matemáticas. Escalas distintas: no comparar paneles.</p>
+  <div class="fila anim" style="gap:32px"><div class="col"><div class="kicker" style="margin-bottom:10px">Matemáticas de investigación<span class="mut"> · FrontierMath T4 · Epoch AI</span></div>
+      <div class="graf dominio" data-graf="g4" data-opc='{"dominio":0}' style="height:520px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_01.png" alt="Matemáticas de investigación"></div></div><div class="col"><div class="kicker" style="margin-bottom:10px">Ciencia (bio, quím, fís)<span class="mut"> · GPQA Diamond · Epoch AI</span></div>
+      <div class="graf dominio" data-graf="g4" data-opc='{"dominio":2}' style="height:520px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_03.png" alt="Ciencia (bio, quím, fís)"></div></div><div class="col"><div class="kicker" style="margin-bottom:10px">Biología computacional<span class="mut"> · BioMysteryBench · Vals AI</span></div>
+      <div class="graf dominio" data-graf="g4" data-opc='{"dominio":3}' style="height:520px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_04.png" alt="Biología computacional"></div></div></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026. Los nueve paneles individuales: anexo (tecla 4).</div>
   
 </section>
-<section data-transition="fade" data-dominio="1">
-  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 2 de 9</div>
-  <h2 class="anim" style="font-size:64px">Conocimiento experto</h2>
-  <p class="nota-dato anim">Humanity&#x27;s Last Exam · AA · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
-  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":1}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_02.png" alt="Conocimiento experto"></div>
-  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+<section data-transition="fade" data-dominio="1" class="trio">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · grupo 2 de 3</div>
+  <h2 class="anim" style="font-size:56px">Conocimiento experto · Trabajo de oficina · Trabajo freelance real</h2>
+  <p class="nota-dato anim">Freelance: proyectos completos siguen en ~21%. Escalas distintas: no comparar paneles.</p>
+  <div class="fila anim" style="gap:32px"><div class="col"><div class="kicker" style="margin-bottom:10px">Conocimiento experto<span class="mut"> · Humanity&#x27;s Last Exam · AA</span></div>
+      <div class="graf dominio" data-graf="g4" data-opc='{"dominio":1}' style="height:520px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_02.png" alt="Conocimiento experto"></div></div><div class="col"><div class="kicker" style="margin-bottom:10px">Trabajo de oficina<span class="mut"> · GDPval · OpenAI</span></div>
+      <div class="graf dominio" data-graf="g4" data-opc='{"dominio":4}' style="height:520px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_05.png" alt="Trabajo de oficina"></div></div><div class="col"><div class="kicker" style="margin-bottom:10px">Trabajo freelance real<span class="mut"> · Remote Labor Index · Epoch</span></div>
+      <div class="graf dominio" data-graf="g4" data-opc='{"dominio":5}' style="height:520px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_06.png" alt="Trabajo freelance real"></div></div></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026. Los nueve paneles individuales: anexo (tecla 4).</div>
   
 </section>
-<section data-transition="fade" data-dominio="2">
-  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 3 de 9</div>
-  <h2 class="anim" style="font-size:64px">Ciencia (bio, quím, fís)</h2>
-  <p class="nota-dato anim">GPQA Diamond · Epoch AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
-  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":2}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_03.png" alt="Ciencia (bio, quím, fís)"></div>
-  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
-  
-</section>
-<section data-transition="fade" data-dominio="3">
-  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 4 de 9</div>
-  <h2 class="anim" style="font-size:64px">Biología computacional</h2>
-  <p class="nota-dato anim">BioMysteryBench · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
-  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":3}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_04.png" alt="Biología computacional"></div>
-  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
-  
-</section>
-<section data-transition="fade" data-dominio="4">
-  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 5 de 9</div>
-  <h2 class="anim" style="font-size:64px">Trabajo de oficina</h2>
-  <p class="nota-dato anim">GDPval · OpenAI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
-  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":4}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_05.png" alt="Trabajo de oficina"></div>
-  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
-  
-</section>
-<section data-transition="fade" data-dominio="5">
-  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 6 de 9</div>
-  <h2 class="anim" style="font-size:64px">Trabajo freelance real</h2>
-  <p class="nota-dato anim">Remote Labor Index · Epoch · Proyectos freelance completos: ~21%. Escalas distintas: no comparar dominios.</p>
-  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":5}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_06.png" alt="Trabajo freelance real"></div>
-  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
-  
-</section>
-<section data-transition="fade" data-dominio="6">
-  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 7 de 9</div>
-  <h2 class="anim" style="font-size:64px">Derecho</h2>
-  <p class="nota-dato anim">Legal Research · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
-  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":6}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_07.png" alt="Derecho"></div>
-  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
-  
-</section>
-<section data-transition="fade" data-dominio="7">
-  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 8 de 9</div>
-  <h2 class="anim" style="font-size:64px">Finanzas</h2>
-  <p class="nota-dato anim">Finance Agent v2 · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
-  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":7}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_08.png" alt="Finanzas"></div>
-  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
-  
-</section>
-<section data-transition="fade" data-dominio="8">
-  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · 9 de 9</div>
-  <h2 class="anim" style="font-size:64px">Medicina</h2>
-  <p class="nota-dato anim">MedCode · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
-  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":8}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_09.png" alt="Medicina"></div>
-  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+<section data-transition="fade" data-dominio="6" class="trio">
+  <div class="kicker anim">03 · Más allá de programar · Gráfica 4 · grupo 3 de 3</div>
+  <h2 class="anim" style="font-size:56px">Derecho · Finanzas · Medicina</h2>
+  <p class="nota-dato anim">Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar paneles.</p>
+  <div class="fila anim" style="gap:32px"><div class="col"><div class="kicker" style="margin-bottom:10px">Derecho<span class="mut"> · Legal Research · Vals AI</span></div>
+      <div class="graf dominio" data-graf="g4" data-opc='{"dominio":6}' style="height:520px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_07.png" alt="Derecho"></div></div><div class="col"><div class="kicker" style="margin-bottom:10px">Finanzas<span class="mut"> · Finance Agent v2 · Vals AI</span></div>
+      <div class="graf dominio" data-graf="g4" data-opc='{"dominio":7}' style="height:520px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_08.png" alt="Finanzas"></div></div><div class="col"><div class="kicker" style="margin-bottom:10px">Medicina<span class="mut"> · MedCode · Vals AI</span></div>
+      <div class="graf dominio" data-graf="g4" data-opc='{"dominio":8}' style="height:520px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_09.png" alt="Medicina"></div></div></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026. Los nueve paneles individuales: anexo (tecla 4).</div>
   
 </section>
 <section id="grafica5" data-transition="fade">
@@ -225,12 +187,13 @@
   
 </section>
 <section class="seccion medio" data-transition="zoom">
-  <div class="n anim">04</div><h2 class="anim">La huella en el código</h2><div class="t anim">GitHub en 2026 · y mi propia gráfica</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Velocidad 2 de 3 · adopción</span></div>
+  <div class="n anim">04</div><h2 class="anim">La huella en el código</h2><div class="t anim">GitHub en 2026 · y mi propia gráfica</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Velocidad 2 de 3 · adopción</span></div><p class="puente anim">Los puntajes suben en nueve dominios. La siguiente pregunta es otra: <b>¿alguien lo está usando?</b> De evaluaciones a huellas de adopción.</p>
   
 </section>
 <section class="medio" data-transition="slide">
   <div class="kicker anim">Stack Overflow · encuesta de abril 2026 · ~1,100 profesionales</div>
-  <h2 class="anim">Agentes en el trabajo: <span class="mut">31%</span> → <span class="grad">59%</span></h2>
+  <div class="fragment mano">✋ ¿Quién usó un agente esta semana? · ¿Y quién revisó <b>todo</b> lo que hizo?</div>
+  <h2 class="fragment">Agentes en el trabajo: <span class="mut">31%</span> → <span class="grad">59%</span></h2>
   <p class="nota-dato anim">En un año, según esta encuesta. No representa a toda la población.</p>
   <div class="vidrio tarjeta anim" style="margin-top:42px;max-width:1200px"><div class="num m gradF">63%</div><p class="sub" style="margin:10px 0 0">casi nunca deja al agente completamente solo. <strong>Agentes con correa.</strong></p></div>
   <div class="fuente">Stack Overflow, encuesta de abril de 2026 (referencia registrada en fuentes.md). Supervisión no equivale a productividad.</div>
@@ -403,11 +366,24 @@
 <section class="medio" data-transition="fade">
   <div class="kicker fuego anim">METR · ensayo con herramientas de principios de 2025</div>
   <h2 class="anim" style="font-size:80px">La productividad <span class="gradF">hay que medirla.</span></h2>
-  <div class="num l gradF anim" style="margin-top:40px">19% más tiempo</div>
+  <div class="fragment mano">✋ ¿Quién se siente más productivo con IA? · ¿Quién lo ha <b>medido</b>?</div>
+  <div class="num l gradF fragment" style="margin-top:40px">19% más tiempo</div>
   <p class="sub anim" style="margin-top:30px">16 expertos OSS · 246 tareas en sus propios repositorios.</p>
   <p class="nota-dato anim">Resultado histórico, no ley universal.</p>
   <p class="sub anim" style="margin-top:36px"><strong>Actualización 2026:</strong> posible mejora;<br>su magnitud sigue incierta por sesgos.</p>
   <div class="fuente">METR, 10 jul 2025 y actualización 24 feb 2026. No generalizar una muestra ni un periodo de herramientas.</div>
+  
+</section>
+<section class="medio" data-transition="fade">
+  <div class="kicker fuego anim">La misma ola · ingeniería inversa con agentes · octubre 2026</div>
+  <h2 class="anim" style="font-size:80px">Lo cerrado se abre <span class="gradF">más rápido.</span></h2>
+  <div class="fila" style="margin-top:36px;gap:28px">
+    <div class="vidrio tarjeta col anim"><div class="etq">Juegos antiguos</div><h3>Un shooter · 3 meses</h3><p class="mut" style="font-size:28px">99% de las funciones reconstruidas, 83% idénticas byte a byte al original; más de 500 mil millones de tokens (estimación del autor).</p></div>
+    <div class="vidrio tarjeta col anim"><div class="etq">Suite de Adobe</div><h3>ArtCraft · 7 clones en Rust</h3><p class="mut" style="font-size:28px">Reimplementación «sala limpia» observando el comportamiento; primer commit 30 sep; alfa con cientos de issues abiertos.</p></div>
+    <div class="vidrio tarjeta col anim"><div class="etq">PS5</div><h3>Hipervisor · firmware 6.xx–13.60</h3><p class="mut" style="font-size:28px">Byepervisor Reborn, 12 oct; bug reencontrado «con asistencia de LLMs». Base para desarrolladores, no un jailbreak.</p></div>
+  </div>
+  <p class="nota-dato anim" style="margin-top:30px"><strong>Lo que lo hizo funcionar: un verificador objetivo.</strong> Compilar con el compilador original y comparar contra el binario.<br>Al 80% el código «se veía bien» y tenía errores semánticos; los agentes intentaron alterar el verificador.</p>
+  <div class="fuente">Heumann, momo5502.com, 9 oct 2026 (juego no identificado, código no publicado) · ArtCraft/PhotoCraft, GitHub · PS5Dev/Byepervisor-Reborn, README. Legalidad en zona gris; actividad ≠ productividad. fuentes.md, sección 19.</div>
   
 </section>
 <section class="tesis" data-transition="fade">
@@ -416,8 +392,22 @@
   <div class="barra anim"></div>
   
 </section>
+<section data-escena="fuego" data-transition="fade" class="medio">
+  <div class="izq" style="max-width:880px">
+    <div class="kicker fuego anim">Después de la evidencia · mi hipótesis</div>
+    <h2 class="anim" style="font-size:92px">¿Más transformadora que el <span class="gradF">fuego</span> y el <span class="grad">internet</span>?</h2>
+    <h2 class="anim gradF" style="font-size:92px;margin-top:10px">Por su velocidad.</h2>
+    <div style="margin-top:50px;display:flex;flex-direction:column;gap:18px">
+      <div class="vidrio tarjeta anim" style="padding:22px 30px"><b class="gradF" style="font-family:var(--display);font-size:34px">Fuego</b> <span class="mut" style="font-size:26px">· evidencias de uso y encendido separadas por milenios</span></div>
+      <div class="vidrio tarjeta fragment g" data-estado="1" style="padding:22px 30px"><b class="grad" style="font-family:var(--display);font-size:34px">Internet</b> <span class="mut" style="font-size:26px">· 74% del mundo conectado en 2025</span></div>
+      <div class="vidrio tarjeta fragment g" data-estado="2" style="padding:22px 30px"><b style="font-family:var(--display);font-size:34px;color:#c4b5fd">Agentes</b> <span class="mut" style="font-size:26px">· cambios medidos en <strong>10 meses</strong></span></div>
+    </div>
+    <p class="nota-dato anim" style="margin-top:18px">Métricas distintas. No es una prueba de mayor impacto histórico.</p>
+  </div>
+  
+</section>
 <section class="seccion medio" data-transition="zoom">
-  <div class="n anim">05</div><h2 class="anim">Fuego, internet, IA</h2><div class="t anim">Adopción, capacidad y costo: las tres curvas juntas</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Velocidad 3 de 3 · costo</span></div>
+  <div class="n anim">05</div><h2 class="anim">Adopción y costo</h2><div class="t anim">Las tres curvas, con cifras y límites</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Velocidad 3 de 3 · adopción y costo</span></div><p class="puente anim">La hipótesis ya está sobre la mesa. Ahora, <b>cuánto se adopta y cuánto se abarata</b>.</p>
   
 </section>
 <section data-transition="slide">
@@ -498,7 +488,7 @@
   
 </section>
 <section class="seccion medio" data-transition="zoom">
-  <div class="n anim">07</div><h2 class="anim">Sean duros conmigo</h2><div class="t anim">Los mejores argumentos en contra</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Lo prometido · contraargumentos</span></div>
+  <div class="n anim">07</div><h2 class="anim">Sean duros conmigo</h2><div class="t anim">Los mejores argumentos en contra</div><div class="anim" style="margin-top:44px"><span class="chip mapa">Lo prometido · contraargumentos</span></div><p class="puente anim">Hasta aquí, la evidencia a favor y la hipótesis. Ahora lo prometido: <b>lo que la debilita</b>.</p>
   
 </section>
 <section class="medio" data-transition="fade" data-auto-animate>
@@ -568,13 +558,14 @@
 </section>
 <section class="medio" data-auto-animate>
   <div class="kicker anim" data-id="contra">El límite que más me importa</div>
-  <h1 class="anim" style="font-size:150px">Un genio <span class="grad">con amnesia</span></h1>
+  <h1 class="anim" style="font-size:120px">No tengo una <span class="gradF">respuesta cómoda.</span></h1>
   <div class="fila" style="margin-top:40px">
-    <div class="vidrio tarjeta col anim"><h3>Memoria externa</h3><p class="mut" style="font-size:28px">archivos e historial pueden persistir; recuperar contexto sigue siendo un problema</p></div>
-    <div class="vidrio tarjeta col anim"><h3>Aprendizaje continuo</h3><p class="mut" style="font-size:28px">guardar notas ≠ actualizar pesos con cada tarea · Karpathy, oct 2025</p></div>
-    <div class="vidrio tarjeta col anim" style="border-color:color-mix(in srgb,var(--cian) 40%,transparent)"><h3 class="grad">Trabajo de ingeniero</h3><p class="mut" style="font-size:28px">contexto · qué problema importa · verificar · responder</p></div>
+    <div class="vidrio tarjeta col anim"><h3>El cliente tiene razón en algo</h3><p class="mut" style="font-size:28px">un prototipo que funciona cuesta una fracción; ya no necesita contratar a quien teclee código</p></div>
+    <div class="vidrio tarjeta col anim"><h3>Lo que se vende peor</h3><p class="mut" style="font-size:28px">la hora de programación · y no sólo la nuestra: texto, análisis y código bajo pedido</p></div>
+    <div class="vidrio tarjeta col anim" style="border-color:rgba(255,122,24,.45)"><h3 class="gradF">Lo que nadie garantiza</h3><p class="mut" style="font-size:28px">que lo que queda (entender, decidir, responder) se lo paguen a ustedes por el título</p></div>
   </div>
-  <p class="fragment g sub" style="margin-top:40px">No es “relájense”. Es <strong class="gradF">“suban de nivel ya”</strong>.</p>
+  <p class="fragment g sub" style="margin-top:40px">No es “relájense”. Tampoco basta “suban de nivel”. Es <strong class="gradF">“cambien de juego”</strong>.</p>
+  <div class="fuente">Opinión del ponente a partir de su experiencia con clientes; no es una medición del mercado laboral. DHH, Rails World 2026, como testimonio.</div>
   
 </section>
 <section class="tesis" data-transition="fade">
@@ -625,11 +616,11 @@
   <div class="fila" style="align-items:center;gap:80px">
     
     <div><div class="kicker anim">Los científicos ya trabajan así</div><h2 class="anim" style="font-size:96px">David Baker</h2>
-      <h3 class="anim">Universidad de Washington · Nobel de Química 2024</h3><p class="sub anim" style="margin-top:30px">Diseño computacional de proteínas nuevas. RFdiffusion3: herramienta abierta, dic 2025.</p>
-      <div class="chip anim" style="margin-top:20px">herramienta de diseño · no validación automática</div>
+      <h3 class="anim">Universidad de Washington · Nobel de Química 2024</h3><p class="sub anim" style="margin-top:30px">Diseño computacional de proteínas nuevas. RFdiffusion3, dic 2025. Y el laboratorio ya prueba cientos de diseños: de ADN a proteína purificada en 48 horas.</p>
+      <div class="chip anim" style="margin-top:20px">cientos de diseños en 48 h · la validación sigue siendo experimental</div>
       </div>
   </div>
-  <div class="fuente">fuentes.md, sección 1 · corte del repositorio: 2 oct 2026 · sin nueva consulta externa.</div>
+  <div class="fuente">fuentes.md, sección 1 · SAPP, Nature Communications 2026 y bakerlab.org, 12 oct 2026 (consulta 13 oct). Diseñar no valida; la prueba es experimental.</div>
   
 </section>
 <section class="medio" data-transition="slide">
@@ -693,15 +684,15 @@
   
 </section>
 <section class="medio" data-transition="slide">
-  <div class="kicker anim">¿Qué hago con mi carrera? · habilidades 1–3 de 5</div>
-  <h2 class="anim" style="font-size:76px">Fundamentos, dirección y verificación</h2>
-  <ol class="lista" style="margin-top:40px;counter-reset:i 0"><li class="fragment g"><div>Fundamentos<span class="d">expliquen el resultado sin IA y respondan preguntas: la prueba de Tao</span></div></li><li class="fragment g"><div>Dirijan agentes<span class="d">criterios de aceptación, pruebas y herramientas permitidas; autorización para datos sensibles</span></div></li><li class="fragment g"><div>Verifiquen<span class="d">fuentes, unidades y casos límite; tests que pasan no bastan</span></div></li></ol>
+  <div class="kicker anim">¿Qué hago con mi carrera? · recomendaciones 1–3 de 6</div>
+  <h2 class="anim" style="font-size:76px">Oficio: construir y verificar</h2>
+  <ol class="lista" style="margin-top:40px;counter-reset:i 0"><li class="fragment g"><div>Fundamentos y verificación<span class="d">expliquen el resultado sin IA (la prueba de Tao); revisen fuentes, unidades y casos límite</span></div></li><li class="fragment g"><div>Dirijan agentes<span class="d">criterios de aceptación, pruebas y herramientas permitidas; autorización para datos sensibles</span></div></li><li class="fragment g"><div>Un problema real, medido<span class="d">una persona usuaria decide qué sirve; tiempo con revisión, defectos y costo por tarea aceptada</span></div></li></ol>
   
 </section>
 <section class="medio" data-transition="slide">
-  <div class="kicker anim">¿Qué hago con mi carrera? · habilidades 4–5 de 5</div>
-  <h2 class="anim" style="font-size:76px">Un problema real. Un resultado medible.</h2>
-  <ol class="lista" style="margin-top:40px;counter-reset:i 3"><li class="fragment g"><div>Un dominio y una persona usuaria<span class="d">acuerden qué problema importa y qué resultado sirve</span></div></li><li class="fragment g"><div>Construyan y midan<span class="d">tiempo con revisión, defectos y costo por tarea aceptada; publiquen con permiso</span></div></li></ol>
+  <div class="kicker anim">¿Qué hago con mi carrera? · recomendaciones 4–6 de 6</div>
+  <h2 class="anim" style="font-size:76px">Mercado: equipo, negocio y redes</h2>
+  <ol class="lista" style="margin-top:40px;counter-reset:i 3"><li class="fragment g"><div>Hagan equipo<span class="d">dos a cuatro personas con roles distintos: quien construye, quien vende, quien conoce el dominio</span></div></li><li class="fragment g"><div>Hagan negocio<span class="d">no vendan horas de código: vendan un problema resuelto; consigan quien pague antes de construirlo todo</span></div></li><li class="fragment g"><div>Redes y mercadeo<span class="d">publiquen lo que construyen, muestren demos a negocios locales y expliquen el valor en una frase</span></div></li></ol>
   
 </section>
 <section class="medio" data-transition="fade">
@@ -714,7 +705,7 @@
       <p class="mut" style="font-size:32px;line-height:1.4">Tener herramientas capaces de ayudarte a construir y dedicarte sólo a demeritarlas.</p>
     </div>
     <div class="vidrio tarjeta col anim" style="padding:32px">
-      <div class="etq">Construir</div><h3>Una idea. Un equipo de agentes.</h3>
+      <div class="etq">Construir</div><h3>Una idea. Un equipo de personas y agentes.</h3>
       <p class="mut" style="font-size:32px;line-height:1.4">Elige un proyecto, reparte tareas, prueba el resultado y conviértelo en algo útil.</p>
     </div>
   </div>
@@ -766,13 +757,6 @@
   <ol class="lista"><li class="fragment g"><div>Prueben Linux y un agente en una tarea acotada<span class="d">Ubuntu en sesión de prueba, una VM o WSL 2; criterios y permisos, sin datos sensibles; revisen y anoten tiempo total y costo</span></div></li><li class="fragment g"><div>Verifiquen una afirmación sobre IA<span class="d">fuente original, fecha, población, métrica y qué no demuestra</span></div></li><li class="fragment g"><div>Escojan un problema de la Mixteca con alguien que lo vive<span class="d">comparar con el método actual: tiempo con revisión, defectos y costo por tarea aceptada</span></div></li></ol>
   
 </section>
-<section class="centro" data-escena="cierre" data-transition="fade">
-  <h2 class="anim" style="font-size:96px;text-align:center">Sean quienes <span class="grad">entienden</span> la magia<br>y la <span class="gradF">construyen</span>.</h2>
-  <p class="sub anim" style="text-align:center;margin-top:30px">Ustedes llegaron a tiempo.</p>
-  <h1 class="fragment g" style="margin-top:50px">Gracias.</h1>
-  <div class="anim" style="margin-top:30px"><a class="chip" href="https://github.com/hendrixmar" target="_blank" rel="noopener noreferrer">github.com/hendrixmar</a></div>
-  
-</section>
 <section class="medio" data-transition="fade">
   <div class="kicker anim">Fuentes · evaluaciones, código y profesión</div>
   <h2 class="anim" style="font-size:76px">De dónde salen las mediciones.</h2>
@@ -794,13 +778,98 @@
   
 </section>
 <section class="centro" data-escena="cierre" data-transition="fade">
+  <div class="kicker anim">Si solo se llevan una cosa</div>
+  <h2 class="anim gradF" style="font-size:150px;text-align:center;margin-top:10px">Verifiquen.</h2>
+  <p class="sub anim" style="text-align:center;margin-top:30px;max-width:1400px">La regla del inicio: las cifras tienen fuentes y límites.<br>Pídanlos siempre. <strong>También a mí.</strong></p>
+  
+</section>
+<section class="centro" data-escena="cierre" data-transition="fade">
   <p class="cita anim" style="font-size:86px;text-align:center;max-width:1500px">Cualquier tecnología suficientemente avanzada es indistinguible de la magia.</p>
   <div class="persona-inline anim"><img class="retrato retrato-mini" data-persona="arthur-c-clarke" src="img/personas/arthur-c-clarke.png" alt="Arthur C. Clarke" width="400" height="500"><p class="autor" style="margin:0"><b>Arthur C. Clarke</b> · tercera ley</p></div>
-  <p class="sub anim" style="margin-top:40px;text-align:center">Entiendan la magia. <strong class="grad">Construyan con ella.</strong></p>
+  <p class="sub anim" style="margin-top:40px;text-align:center">Lo que hoy parece magia <strong class="grad">se puede entender</strong>.</p>
   <div class="fuente">Clarke, carta a <i>Science</i> (1968) y <i>Profiles of the Future</i> (ed. revisada, 1973).</div>
   
 </section>
+<section class="centro" data-escena="cierre" data-transition="fade">
+  <h2 class="anim" style="font-size:96px;text-align:center">Sean quienes <span class="grad">entienden</span> la magia<br>y la <span class="gradF">construyen</span>.</h2>
+  <p class="sub anim" style="text-align:center;margin-top:30px">Ustedes llegaron a tiempo.</p>
+  <h1 class="fragment g" style="margin-top:50px">Gracias.</h1>
+  <div class="anim" style="margin-top:30px"><a class="chip" href="https://github.com/hendrixmar" target="_blank" rel="noopener noreferrer">github.com/hendrixmar</a></div>
+  
+</section>
 <section class="centro" data-preguntas="tablero"><h1 class="anim">¿Preguntas?</h1><p class="sub anim" style="margin-top:44px;max-width:1400px;text-align:center">Conversemos sobre capacidades, límites y responsabilidad humana.</p></section>
+<section data-transition="fade" data-dominio="0" id="dominio0">
+  <div class="kicker anim">Anexo para preguntas · Gráfica 4 · dominio 1 de 9 · tecla 4 regresa</div>
+  <h2 class="anim" style="font-size:64px">Matemáticas de investigación</h2>
+  <p class="nota-dato anim">FrontierMath T4 · Epoch AI · 100% de ~41 problemas; no de todas las matemáticas. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":0}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_01.png" alt="Matemáticas de investigación"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="1">
+  <div class="kicker anim">Anexo para preguntas · Gráfica 4 · dominio 2 de 9 · tecla 4 regresa</div>
+  <h2 class="anim" style="font-size:64px">Conocimiento experto</h2>
+  <p class="nota-dato anim">Humanity&#x27;s Last Exam · AA · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":1}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_02.png" alt="Conocimiento experto"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="2">
+  <div class="kicker anim">Anexo para preguntas · Gráfica 4 · dominio 3 de 9 · tecla 4 regresa</div>
+  <h2 class="anim" style="font-size:64px">Ciencia (bio, quím, fís)</h2>
+  <p class="nota-dato anim">GPQA Diamond · Epoch AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":2}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_03.png" alt="Ciencia (bio, quím, fís)"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="3">
+  <div class="kicker anim">Anexo para preguntas · Gráfica 4 · dominio 4 de 9 · tecla 4 regresa</div>
+  <h2 class="anim" style="font-size:64px">Biología computacional</h2>
+  <p class="nota-dato anim">BioMysteryBench · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":3}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_04.png" alt="Biología computacional"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="4">
+  <div class="kicker anim">Anexo para preguntas · Gráfica 4 · dominio 5 de 9 · tecla 4 regresa</div>
+  <h2 class="anim" style="font-size:64px">Trabajo de oficina</h2>
+  <p class="nota-dato anim">GDPval · OpenAI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":4}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_05.png" alt="Trabajo de oficina"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="5">
+  <div class="kicker anim">Anexo para preguntas · Gráfica 4 · dominio 6 de 9 · tecla 4 regresa</div>
+  <h2 class="anim" style="font-size:64px">Trabajo freelance real</h2>
+  <p class="nota-dato anim">Remote Labor Index · Epoch · Proyectos freelance completos: ~21%. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":5}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_06.png" alt="Trabajo freelance real"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="6">
+  <div class="kicker anim">Anexo para preguntas · Gráfica 4 · dominio 7 de 9 · tecla 4 regresa</div>
+  <h2 class="anim" style="font-size:64px">Derecho</h2>
+  <p class="nota-dato anim">Legal Research · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":6}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_07.png" alt="Derecho"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="7">
+  <div class="kicker anim">Anexo para preguntas · Gráfica 4 · dominio 8 de 9 · tecla 4 regresa</div>
+  <h2 class="anim" style="font-size:64px">Finanzas</h2>
+  <p class="nota-dato anim">Finance Agent v2 · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":7}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_08.png" alt="Finanzas"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
+<section data-transition="fade" data-dominio="8">
+  <div class="kicker anim">Anexo para preguntas · Gráfica 4 · dominio 9 de 9 · tecla 4 regresa</div>
+  <h2 class="anim" style="font-size:64px">Medicina</h2>
+  <p class="nota-dato anim">MedCode · Vals AI · Tareas evaluadas, no una profesión completa. Escalas distintas: no comparar dominios.</p>
+  <div class="graf dominio" data-graf="g4" data-opc='{"dominio":8}' style="height:625px"><div class="cont"></div><img class="respaldo" src="img/04_dominio_09.png" alt="Medicina"></div>
+  <div class="fuente">Epoch AI, AA, Vals AI, OpenAI (GDPval hasta abr 2026). Hueco = Opus 4.5 o † primer evaluado. Mejor puntaje del corte: 2 oct 2026.</div>
+  
+</section>
 </div></div>
 <script src="vendor/three.min.js"></script>
 <script src="vendor/gsap.min.js"></script>

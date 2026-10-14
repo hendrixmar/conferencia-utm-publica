@@ -5,7 +5,7 @@ const deck=new Reveal({width:1920,height:1080,margin:0.03,minScale:0.2,maxScale:
   controls:true,controlsTutorial:false,controlsLayout:'bottom-right',progress:true,slideNumber:'c/t',
   transition:movimiento.matches?'none':'fade',transitionSpeed:'fast',backgroundTransition:movimiento.matches?'none':'fade',autoAnimate:!movimiento.matches,autoAnimateDuration:.6,autoAnimateEasing:'cubic-bezier(.22,1,.36,1)',
   pdfSeparateFragments:false,plugins:[],
-  keyboard:{53:()=>saltar('grafica5'),101:()=>saltar('grafica5'),48:()=>saltar('preguntas'),96:()=>saltar('preguntas')}});
+  keyboard:{53:()=>saltar('grafica5'),101:()=>saltar('grafica5'),52:()=>saltar('dominio0'),100:()=>saltar('dominio0'),48:()=>saltar('preguntas'),96:()=>saltar('preguntas')}});
 // Teclas: 5 = gráfica 5 (y 5 otra vez regresa), 0 = preguntas en vivo (y 0 otra vez regresa).
 let regreso=null;
 const botonSonido=document.getElementById('sonido');
