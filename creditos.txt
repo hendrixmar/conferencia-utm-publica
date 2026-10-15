@@ -2,6 +2,7 @@ Fotografías de esta edición pública
 
 | Archivo / persona | Fuente y crédito | Licencia / cambios |
 |---|---|---|
+| `hendrik-martina.png` · Hendrik Martina | Foto entregada por el ponente para esta charla (15 oct 2026); no es el avatar de GitHub | Uso en esta presentación; no hay licencia abierta de redistribución |
 | `robert-c-martin.png` · Robert C. Martin | [Commons](https://commons.wikimedia.org/wiki/File:Robert_C._Martin_surrounded_by_computers_(cropped).jpg), Angelacleancoder; recorte PhotographyEdits | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); reducción y conversión del recorte |
 | `arthur-c-clarke.png` · Arthur C. Clarke | [Commons](https://commons.wikimedia.org/wiki/File:Arthur_C._Clarke_1965.jpg), ITU Pictures | [CC BY 2.0](https://creativecommons.org/licenses/by/2.0/); recorte y conversión |
 | `daniel-stenberg.png` · Daniel Stenberg | [Fotografías oficiales](https://daniel.haxx.se/photos.html), Daniel Stenberg, “on green, cropped” | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); reducción y conversión |

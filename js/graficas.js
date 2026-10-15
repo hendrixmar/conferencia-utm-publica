@@ -179,10 +179,10 @@ G.g7b=cv=>{const f=s=>s.filter(r=>r.f<'2026-10');const P=f(D.hk.mesPub),Q=f(D.hk
 // ---------- registro ----------
 const vivos=new Map();
 window.Graficas={
-  montar(seccion){ seccion.querySelectorAll('[data-graf]').forEach(el=>{ const id=el.dataset.graf; const prev=vivos.get(el); if(prev){[].concat(prev).forEach(c=>{gsap.killTweensOf(c);c.destroy();});}
+  montar(seccion,animada=true){ seccion.querySelectorAll('[data-graf]').forEach(el=>{ const id=el.dataset.graf; const prev=vivos.get(el); if(prev){[].concat(prev).forEach(c=>{gsap.killTweensOf(c);c.destroy();});}
       try{ const tgt=el.querySelector('canvas')&&id!=='g4'?el.querySelector('canvas'):el.querySelector('.cont')||el; const opc=el.dataset.opc?JSON.parse(el.dataset.opc):{};
         const creadas=G[id](tgt,opc);
-        if(movimiento.matches) [].concat(creadas).forEach(ch=>{
+        if(movimiento.matches||!animada) [].concat(creadas).forEach(ch=>{
           ch.stop(); ch.options.animation=false; ch.options.animations={};
           gsap.getTweensOf(ch).forEach(t=>t.progress(1));
           ch.$cortina=1; ch.$etq=1; ch.update('none');

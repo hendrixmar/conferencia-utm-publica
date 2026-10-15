@@ -38,6 +38,13 @@ html body.reveal-viewport,body{color:var(--txt);background:var(--bg)}
 #sonido:hover{color:var(--txt);border-color:var(--borde-luz)}
 #sonido[aria-pressed=true]{color:var(--cian);border-color:color-mix(in srgb,var(--cian) 60%,transparent)}
 #sonido:focus-visible{outline:3px solid var(--cian);outline-offset:3px}
+#animaciones{position:fixed;left:18px;top:18px;z-index:5;min-height:44px;padding:8px 16px;border:1px solid var(--borde);border-radius:999px;background:rgba(4,6,12,.9);color:var(--mut);font:600 12px Inter,sans-serif;cursor:pointer}
+#animaciones:hover{color:var(--txt);border-color:var(--borde-luz)}
+#animaciones[aria-pressed=true]{color:var(--cian);border-color:var(--cian)}
+#animaciones:focus-visible{outline:3px solid var(--cian);outline-offset:3px}
+.reveal .slides .inicio-animacion{position:absolute;width:0;height:0;pointer-events:none}
+@media print{#animaciones{display:none!important}}
+@media (max-height:600px){#animaciones{left:8px;top:4px;min-height:32px;padding:4px 10px;font-size:10px}}
 @media print{#ambiente,#alba,#sonido{display:none!important}}
 .reveal{z-index:1;font-family:'Inter',system-ui,sans-serif;color:var(--txt);font-size:34px;font-weight:400;letter-spacing:-.005em}
 .reveal .slides{text-align:left}
@@ -112,7 +119,7 @@ ol.lista,ul.lista{list-style:none;margin:0;padding:0;counter-reset:i}
 .reveal img.retrato-mediano{width:340px;height:425px}
 .reveal img.retrato-mini{width:140px;height:175px;border-radius:8px}
 .reveal img.retrato-linea{display:inline-block;width:80px;height:90px;vertical-align:middle;margin-right:12px;border-radius:4px}
-.reveal img.retrato[data-persona="hendrik-martina"]{height:400px;object-position:30% 40%}
+.reveal img.retrato[data-persona="hendrik-martina"]{width:460px;height:460px;object-fit:cover;object-position:center 42%}
 .reveal img.retrato[data-persona="dhh"]{width:400px;height:400px}
 .reveal img.retrato[data-persona="terence-tao"]{object-position:50% 25%}
 .reveal img.retrato[data-persona="arthur-c-clarke"]{object-position:50% 20%}

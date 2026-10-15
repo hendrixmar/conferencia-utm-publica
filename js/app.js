@@ -9,6 +9,36 @@ const deck=new Reveal({width:1920,height:1080,margin:0.03,minScale:0.2,maxScale:
 // Teclas: 5 = gráfica 5 (y 5 otra vez regresa), 0 = preguntas en vivo (y 0 otra vez regresa).
 let regreso=null;
 const botonSonido=document.getElementById('sonido');
+const botonAnimaciones=document.getElementById('animaciones');
+let conNext=false;
+function pendiente(sec){return conNext&&sec.querySelector('.inicio-animacion:not(.visible)');}
+function prepararAnimaciones(){
+  deck.getHorizontalSlides().forEach(sec=>{
+    sec.querySelector('.inicio-animacion')?.remove();
+    sec.querySelectorAll('.fragment[data-fragment-index]').forEach(el=>{
+      if(el.dataset.indiceOriginal!==undefined){
+        if(el.dataset.indiceOriginal==='')el.removeAttribute('data-fragment-index');
+        else el.dataset.fragmentIndex=el.dataset.indiceOriginal;
+      }
+    });
+    if(!conNext||sec.dataset.escena==='titulo'||!sec.querySelector('.anim,[data-graf],.ruido'))return;
+    sec.querySelectorAll('.fragment').forEach(el=>{
+      el.dataset.indiceOriginal=el.getAttribute('data-fragment-index')||'';
+      if(el.hasAttribute('data-fragment-index'))el.dataset.fragmentIndex=+el.dataset.fragmentIndex+1;
+    });
+    const inicio=document.createElement('span');
+    inicio.className='fragment inicio-animacion';inicio.dataset.fragmentIndex='0';
+    inicio.setAttribute('aria-hidden','true');sec.prepend(inicio);
+  });
+  deck.sync();
+}
+botonAnimaciones.addEventListener('click',()=>{
+  conNext=!conNext;
+  botonAnimaciones.setAttribute('aria-pressed',String(conNext));
+  botonAnimaciones.textContent=conNext?'Animaciones: con Next':'Animaciones: al entrar';
+  botonAnimaciones.title=conNext?'Cambiar para animar al entrar':'Cambiar para iniciar las animaciones con Next';
+  detenerCascada();prepararAnimaciones();deck.slide(deck.getIndices().h,0,-1);presentar(deck.getCurrentSlide());
+});
 let audio=null,sonido=false;
 function actualizarSonido(){botonSonido.setAttribute('aria-pressed',String(sonido));botonSonido.textContent=sonido?'Sonido: encendido':'Sonido: apagado';botonSonido.title=sonido?'Silenciar efectos de sonido':'Activar efectos de sonido suaves';}
 function silenciar(){sonido=false;actualizarSonido();if(audio)audio.suspend().catch(()=>{});}
@@ -40,6 +70,7 @@ function ambiente(){
   document.getElementById('ambiente').hidden=deck.isPaused()||deck.isOverview();
   document.getElementById('alba').hidden=deck.isPaused()||deck.isOverview();
   botonSonido.hidden=deck.isPaused()||deck.isOverview();
+  botonAnimaciones.hidden=deck.isPaused()||deck.isOverview();
   if(audio){if(!activo)audio.suspend().catch(()=>{});else if(sonido)audio.resume().catch(silenciar);}
 }
 function saltar(destino){ const secs=deck.getHorizontalSlides(); const i=secs.findIndex(s=>destino==='preguntas'?s.dataset.preguntas==='tablero':s.id===destino); if(i<0) return;
@@ -74,8 +105,15 @@ function adelantar(e){
   gsap.set(e.fragment.closest('section').querySelectorAll('.ruido span'),{opacity:(i,s)=>+s.dataset.o,scale:1,y:0});
 }
 function entrar(sec){
-  const els=sec.querySelectorAll('.anim');
   gsap.killTweensOf(sec.querySelectorAll('.anim,.st,.ruido span,.barraH > div,.embudo .nivel'));
+  if(pendiente(sec)){
+    const animados=sec.querySelectorAll('.anim'),ruido=sec.querySelectorAll('.ruido span');
+    if(animados.length)gsap.set(animados,{autoAlpha:1,y:0,clearProps:'transform'});
+    if(ruido.length)gsap.set(ruido,{opacity:(i,s)=>+s.dataset.o,scale:1,y:0});
+    sec.querySelectorAll('.barraH > div').forEach(b=>gsap.set(b,{width:b.dataset.w+'%'}));
+    contar(sec);return;
+  }
+  const els=sec.querySelectorAll('.anim');
   if(els.length) gsap.fromTo(els,{autoAlpha:.55,y:movimiento.matches?0:18},{autoAlpha:1,y:0,duration:movimiento.matches?0:.6,ease:'power3.out',stagger:movimiento.matches?0:.045,clearProps:'transform'});
   cascada(sec);
   sec.querySelectorAll('.barraH > div').forEach(b=>{
@@ -122,14 +160,17 @@ function perspectiva(sec){
       {rotationX:0,rotationY:0,rotationZ:0,z:0,scale:1,'--luz':0,duration:1.8,ease:'power2.inOut',clearProps:'transform,transformOrigin,--luz,willChange'});
   });
 }
-function escena(){ const s=deck.getCurrentSlide(); const n=deck.isOverview()||deck.isPaused()?null:s.dataset.escena||null;
+function escena(){ const s=deck.getCurrentSlide(); const n=deck.isOverview()||deck.isPaused()||(pendiente(s)&&s.dataset.escena!=='titulo')?null:s.dataset.escena||null;
   // estado = número de fragmentos visibles con data-estado (o índice+1)
   const vis=[...s.querySelectorAll('.fragment.visible[data-estado]')].map(e=>+e.dataset.estado); const est=vis.length?Math.max(...vis):(+(s.dataset.estado||0));
-  if(window.Escenas) Escenas.set(n,est); }
+  if(window.Escenas) Escenas.set(n,est,!conNext); }
 // Amanecer: el horizonte (#alba) se enciende con el avance de la charla.
 function alba(){ document.documentElement.style.setProperty('--alba',deck.getProgress().toFixed(3)); }
-deck.on('ready',()=>{ alba(); if(window.PreguntasDeck) PreguntasDeck.iniciar(deck); document.fonts.ready.then(()=>{ const sec=deck.getCurrentSlide(); entrar(sec); Graficas.montar(sec); perspectiva(sec); escena(); }); });
-deck.on('slidechanged',e=>{alba();detenerCascada();if(e.previousSlide){aplanar(e.previousSlide);Graficas.desmontar(e.previousSlide);gsap.killTweensOf(e.previousSlide.querySelectorAll('.anim,.st,.ruido span,.barraH > div'));}entrar(e.currentSlide);Graficas.montar(e.currentSlide);perspectiva(e.currentSlide);escena();});
+function presentar(sec){entrar(sec);Graficas.montar(sec,!pendiente(sec));if(!pendiente(sec))perspectiva(sec);else aplanar(sec);escena();}
+deck.on('ready',()=>{ alba(); if(window.PreguntasDeck) PreguntasDeck.iniciar(deck); document.fonts.ready.then(()=>presentar(deck.getCurrentSlide())); });
+deck.on('slidechanged',e=>{alba();detenerCascada();if(e.previousSlide){aplanar(e.previousSlide);Graficas.desmontar(e.previousSlide);gsap.killTweensOf(e.previousSlide.querySelectorAll('.anim,.st,.ruido span,.barraH > div'));}presentar(e.currentSlide);});
+deck.on('fragmentshown',e=>{if(e.fragment.classList.contains('inicio-animacion'))presentar(deck.getCurrentSlide());});
+deck.on('fragmenthidden',e=>{if(e.fragment.classList.contains('inicio-animacion')){detenerCascada();presentar(deck.getCurrentSlide());}});
 deck.on('fragmentshown',adelantar);
 deck.on('fragmentshown',escena);
 deck.on('fragmenthidden',escena);
